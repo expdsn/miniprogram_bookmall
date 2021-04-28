@@ -1,0 +1,94 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/4/28 下午7:47:01
+使用方法：
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="index">
+      <view class="swiperstyle">
+        <swiper duration="500" indicator-dots="true" interval="2000" current="0" autoplay="false">
+          <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+            <image class="sk-image"></image>
+          </swiper-item>
+        </swiper>
+        <view class="search_con">
+          <view class="search_con_text sk-image" placeholder="请输入关键字" type="text"></view>
+          <view class="search sk-transparent sk-text-14-2857-799 sk-text" style="background-position-x: 100%;">Search</view>
+        </view>
+      </view>
+      <view class="tabbar">
+        <view class="item">
+          <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-944 sk-text" style="background-position-x: 50%;">全部分类</view>
+        </view>
+        <view class="item">
+          <view class="icon-shu sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-829 sk-text" style="background-position-x: 50%;">教材教辅</view>
+        </view>
+        <view class="item">
+          <view class="icon-shu2 sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-562 sk-text" style="background-position-x: 50%;">经管类</view>
+        </view>
+        <view class="item">
+          <view class="icon-jisuanji sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-696 sk-text" style="background-position-x: 50%;">计算机类</view>
+        </view>
+        <view class="item">
+          <view class="icon-shu3 sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-135 sk-text" style="background-position-x: 50%;">文学类</view>
+        </view>
+        <view class="item">
+          <view class="icon-dianying sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-816 sk-text" style="background-position-x: 50%;">生活艺术</view>
+        </view>
+        <view class="item">
+          <view class="icon-banshou sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-400 sk-text" style="background-position-x: 50%;">机械类</view>
+        </view>
+        <view class="item">
+          <view class="icon-thin-_book_writi sk-pseudo sk-pseudo-circle"></view>
+          <view class="item_text sk-transparent sk-text-14-2857-445 sk-text" style="background-position-x: 50%;">人文社科</view>
+        </view>
+      </view>
+      <view class="title">
+        <view class="line1"></view>
+        <view class="center-con sk-transparent sk-text-14-2857-516 sk-text" style="border: none; background-position-x: 50%;">
+          热搜书单
+        </view>
+        <view class="line2"></view>
+      </view>
+      <view class="recommand sk-transparent sk-text-14-2857-297 sk-text">猜你喜欢</view>
+      <view class="goods_con">
+        <view is="components/goods_item/goods_item" data-url="../goodsdetails/goodsdetails">
+          <view class="item--goods_item">
+            <view class="item--goodsimg_con">
+              <image class="item--goodsimg sk-image"></image>
+            </view>
+          </view>
+        </view>
+        <view is="components/goods_item/goods_item" data-url="../goodsdetails/goodsdetails">
+          <view class="item--goods_item">
+            <view class="item--goodsimg_con">
+              <image class="item--goodsimg sk-image"></image>
+            </view>
+          </view>
+        </view>
+        <view is="components/goods_item/goods_item" data-url="../goodsdetails/goodsdetails"></view>
+        <view is="components/goods_item/goods_item" data-url="../goodsdetails/goodsdetails"></view>
+      </view>
+    </view>
+  </view>
+</template>

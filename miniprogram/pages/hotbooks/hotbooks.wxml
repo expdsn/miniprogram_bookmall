@@ -1,0 +1,28 @@
+<view class="hotbooks">
+  <view class="bookrank_con">
+    <view class="bookrank1">
+      <view class="bookrank1_con">
+        <image src="../../images/goodsitem/test.jpg" class="bookimg"></image>
+        <view class="books_name">人类大瘟疫</view>
+      </view>
+      <view class="rankcon1">TOP2</view>
+    </view>
+    <view class="bookrank2">
+      <view class="bookrank2_con">
+        <image src="../../images/goodsitem/test.jpg" class="bookimg"></image>
+        <view class="books_name">人类大瘟疫</view>
+      </view>
+      <view class="rankcon2">TOP1</view>
+    </view>
+    <view class="bookrank3">
+      <view class="bookrank3_con">
+        <image src="../../images/goodsitem/test.jpg" class="bookimg"></image>
+        <view class="books_name">人类大瘟疫</view>
+      </view>
+      <view class="rankcon3">TOP3</view>
+    </view>
+  </view>
+  <block wx:for='{{booklist}}' wx:key='index'>
+    <hotbooks_item item="{{item}}"></hotbooks_item>
+  </block>
+</view>

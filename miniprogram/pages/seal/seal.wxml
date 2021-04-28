@@ -1,0 +1,5 @@
+<view class="seal">
+  <block wx:for='{{tradelist}}' wx:key='index'>
+    <trade_item item="{{item}}"></trade_item>
+  </block>
+</view>

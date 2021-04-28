@@ -1,0 +1,16 @@
+<view class='goods_item'>
+  <view class="goodsimg_con">
+    <image src="../../images/goodsitem/test.jpg" class="goodsimg"></image>
+  </view>
+  <view class="goods_msg_con">
+    <view class="book_name">{{item.name}}</view>
+  <view class="book_new">
+    <view class="icon-tag"></view>
+    <view class="book_new_text">{{item.new}}</view>
+  </view>
+  <view class="book_local">
+    <view class="icon-location"></view>
+    <view class="book_local_text">{{item.local}}</view>
+  </view>
+  </view>
+</view> 

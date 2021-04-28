@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "trade_item": "../../components/trade_item/trade_item"
+  },
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "已售商品",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light"
+}

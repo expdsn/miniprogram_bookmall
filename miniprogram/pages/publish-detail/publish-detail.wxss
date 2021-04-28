@@ -1,0 +1,164 @@
+/* pages/publish-detail/publish-detail.wxss */
+
+@import "../../iconfont.wxss";
+/* 左边箭头 */
+.icon-zuobian{
+  position: absolute;
+  left: 38rpx;
+  top: 112rpx;
+  width: 40rpx;
+  height: 40rpx;
+  font-family: 'iconfont';
+}
+/* 发布 */
+.publish {
+  position: relative;
+  left: 296rpx;
+  top: 104rpx;
+  width: 160rpx;
+  height: 56rpx;
+  color: rgba(80, 85, 89, 100);
+  font-size: 40rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+}
+/* 图书的信息 */
+.book-info {
+  position: relative;
+  left: 38rpx;
+  top: 204rpx;
+  width: 674rpx;
+  height: 300rpx;
+  border-radius: 20rpx 20rpx 20rpx 20rpx;
+  box-shadow: 0rpx 2rpx 8rpx 0rpx rgba(0, 0, 0, 0.4);
+}
+/* 图书的图片 */
+.book-photo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 20rpx 0rpx 0rpx 20rpx;
+}
+.book-photo image {
+  width: 100%;
+  height: 100%;
+}
+/* 图书信息的右侧 */
+.info-right {
+  position: relative;
+  top: 0;
+  left: 300rpx;
+  width: 371rpx;
+  height: 100%;
+  float: left;
+}
+.book-name {
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+}
+/* 学生认证的图标 */
+.icon-renzheng {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30rpx;
+  height: 30rpx;
+  font-family: 'iconfont';
+  float: right;
+}
+/* 卖出的理由 */
+.sales-reason {
+  overflow: hidden;
+  width: 370rpx;
+  height: 153rpx;
+  margin-top: 20rpx;
+  color: rgba(194, 199, 204, 100);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+/* tag的图标 */
+.icon-tag2 {
+  position: absolute;
+  left: 10rpx;
+  bottom: 20rpx;
+  font-family: 'iconfont';
+
+}
+.icon-tag2::before {
+  margin-right: 10rpx;
+}
+/* 地址的图标 */
+.icon-location {
+  position: absolute;
+  font-family: 'iconfont';
+  right: 30rpx;
+  bottom: 20rpx;
+}
+.icon-location::before {
+ margin-right: 10rpx;
+}
+.table1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 72rpx;
+  top: 350rpx;
+  width: 620rpx;
+  height: 400rpx;
+}
+ .table1 view{
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  flex: 25%;
+  border-bottom: 2rpx solid #E1E3E6;
+}
+.icon-YUAN-circle-fill {
+  font-family: 'iconfont';
+  position: absolute;
+  top: 30rpx;
+  left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;  
+}
+.money {
+  margin-left: 100rpx;
+  font-size: 56rpx;
+  color: rgba(194, 199, 204, 100);
+  font-family: PingFangSC-bold;
+}
+/* 包邮 */
+.free-shipping {
+  float: right;
+  margin-right: 40rpx;
+}
+/* 支持自提 */
+.self-extraction {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  color: rgba(222, 125, 44, 100);
+}
+/* 自提免费 */
+.free {
+  margin-left: 100rpx;
+  font-size: 36rpx;
+  color: rgba(194, 199, 204, 100);
+  font-family: PingFangSC-bold;
+}
+/* 发布 */
+.publish {
+  top: 450rpx;
+  left: 85rpx;
+  width: 560rpx;
+  height: 110rpx;
+  text-align: center;
+  line-height: 110rpx;
+  border-radius: 16px;
+  background-color: rgba(28, 158, 86, 100);
+  color: rgba(255, 255, 255, 100);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+}

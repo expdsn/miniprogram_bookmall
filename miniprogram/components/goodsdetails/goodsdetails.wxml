@@ -1,0 +1,60 @@
+<view class="goodsdetails">
+  <view class="charge_con">
+    <view class="left">￥16</view>
+    <view class="center">运费￥5</view>
+    <view class="right">支持自提</view>
+  </view>
+  <view class="local">
+    <view class="icon-location"></view>
+    <view class="localtext">郫都校区 3舍</view>
+  </view>
+  <view class="swiperstyle">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+        <!-- <block wx:for="{{background}}" wx:key="*this"> -->
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+        <!-- </block> -->
+      </swiper>
+  </view>
+  <view class="bookmsg">
+    <view class="item">
+      <view class="left">作者</view>
+      <view class="right">王小波</view>
+    </view>
+    <view class="item">
+      <view class="left">出版社</view>
+      <view class="right">北京十月文艺出版社</view>
+    </view>
+    <view class="item">
+      <view class="left">ISBN</view>
+      <view class="right">9787530216590</view>
+    </view>
+    <view class="item">
+      <view class="left">品相</view>
+      <view class="right">9成新</view>
+    </view>
+  </view>
+  <view class="details_title">商品详情</view>
+  <view class="details_text">之前看完一直闲置在书架上，最近清理物品准备把
+它出掉。
+只看过一遍，基本是新的，有需要的朋友尽快联系
+我，郫都校区的同学可以自提。</view>
+  <view class="bottom">
+    <view class="left">
+      <view class="icon-shoucang1"></view>
+      <view class="down">想要</view>
+    </view>
+    <view class="center">加入购物车</view>
+    <view class="right">马上买</view>
+  </view>
+</view>

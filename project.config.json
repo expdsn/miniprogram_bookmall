@@ -1,0 +1,162 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.11.1",
+  "appid": "wx04ade86ea87b4266",
+  "projectname": "cdtu_book_mall",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "watchOptions": {
+    "ignore": []
+  },
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/hotbooks/hotbooks",
+          "pathName": "pages/hotbooks/hotbooks",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/paysucceed/paysucceed",
+          "pathName": "pages/paysucceed/paysucceed",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/buy/buy",
+          "pathName": "pages/buy/buy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/want/want",
+          "pathName": "pages/want/want",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/seal/seal",
+          "pathName": "pages/seal/seal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/sealing/sealing",
+          "pathName": "pages/sealing/sealing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/otherseal/otherseal",
+          "pathName": "pages/otherseal/otherseal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/shdz/shdz",
+          "pathName": "pages/shdz/shdz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/qrxd/qrxd",
+          "pathName": "pages/qrxd/qrxd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goodsdetails/goodsdetails",
+          "pathName": "pages/goodsdetails/goodsdetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/goods-descript/goods-descript",
+          "pathName": "pages/goods-descript/goods-descript",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

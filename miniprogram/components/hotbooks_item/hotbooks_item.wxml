@@ -1,0 +1,11 @@
+<view class="books_item">
+  <view class="num">4</view>
+  <view class="bookmsg_con">
+    <image src="../../images/goodsitem/test.jpg" class="img"></image>
+    <view class="bookmsg">
+      <view class="bookname">{{item.bookname}}</view>
+      <view class="bookediter">{{item.bookediter}}</view>
+      <view class="send">{{item.send}}</view>
+    </view>
+  </view>
+</view>

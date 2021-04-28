@@ -1,0 +1,69 @@
+/* pages/grxx/grxx.wxss */
+@import "../../iconfont.wxss";
+/* 标题 */
+.title {
+  margin: 60rpx 0 80rpx 36rpx;
+  font-size: 32rpx;
+  color: #DE7D2C;
+  font-weight: 700;
+}
+/* 头像 */
+.heaeder {
+  margin: auto;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: pink;
+  overflow: hidden;
+}
+.heaeder image {
+  width: 100%;
+  height: 100%;
+}
+/* 个人信息 */
+.person {
+  display: flex;
+  flex-direction: column;
+  height: 500rpx;
+  width: 90%;
+  margin: 40rpx auto 0;
+  font-size: 36rpx;
+  color: #505559;
+}
+.person li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid #E1E3E6;
+}
+.person li:nth-child(2) {
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.person li:nth-child(2) input {
+  width: 100%;
+}
+.person li view,
+.person li text {
+  color: #C2C7CC;
+}
+.icon-youbian {
+  font-family: 'iconfont';
+  color: #505559 !important;
+}
+/* 完成按钮 */
+button {
+  position: absolute;
+  bottom: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #1C9E56;
+  font-size: 32rpx;
+  color: #fff;
+}

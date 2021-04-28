@@ -1,0 +1,19 @@
+<!--pages/publish/publish.wxml-->
+<!-- 发布书籍页 -->
+<page>
+<view class="publish">
+  发布书籍
+</view>
+<view class="box1">
+  <view class="write"> 1  填写详情</view>
+  <image src="../../images/publish/write.png" class="write1" alt=""></image>
+  <view class="write"> 2  发货</view>
+  <image src="../../images/publish/send.png" class="write1" alt=""></image>
+  <view class="write"> 3  收到货款</view>
+  <image src="../../images/publish/shoudao.png" class="write1" alt=""></image>
+</view>
+<view class="scan">扫码卖书</view>
+<view class="input" bindtap="shuru">手动输入</view>
+</page>
+
+

@@ -1,0 +1,33 @@
+<view class="trade_item">
+  <view class="img_con">
+    <image src="../../images/goodsitem/test.jpg" class="img"></image>
+  </view>
+  <view class="msg_con">
+    <view class="bookname">{{item.bookname}}</view>
+    <view class="descript">{{item.descript}}</view>
+    <view class="new">
+      <view class="icon-tag"></view>
+      <view class="new_text">{{item.new}}</view>
+    </view>
+    <view class="charge">
+      <view class="icon-location"></view>
+      <view class="charge_text">{{item.charge}}</view>
+    </view>
+    <view class="condition">{{item.condition}}</view>
+    <view class="status_con" wx-if="{{item.type==0}}">
+      <view class="left">联系卖家</view>
+      <view class="right">评价</view>
+    </view>
+    <view class="status_con" wx-if="{{item.type==1}}">
+      <view class="left">联系卖家</view>
+      <view class="right">马上买</view>
+    </view>
+    <view class="connect_man" wx-if="{{item.type==2}}">联系顾客</view>
+    <view class="status_con2" wx-if="{{item.type==3}}">
+      <view class="item">下架</view>
+      <view class="item">编辑</view>
+      <view class="item">改价</view>
+    </view>
+  </view>
+  
+</view>

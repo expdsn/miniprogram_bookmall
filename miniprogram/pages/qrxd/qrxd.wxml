@@ -1,0 +1,70 @@
+<!--pages/qrxd/qrxd.wxml-->
+<!-- 这是确认下单页面 -->
+<!-- 导航栏部分 -->
+<!-- 顶部定位 -->
+<view class="locate" bindtap="locate">
+  <view class="icon-location"></view>
+  <view class="icon-youbian"></view>
+  <text>{{uname}} {{phone}}</text>
+  <text>致远居3号楼</text>
+</view>
+
+<!-- 订单信息 -->
+<view class="order">
+  <view class="order_self">
+    <view class="head">
+      <image src="../../images/qrxd/head.jpg"></image>
+    </view>
+    <view class="uname">{{netname}}</view>
+    <view class="just">刚刚来过</view>
+    <view class="icon-approve">学生认证</view>
+  </view>
+  <view class="order_news">
+    <view class="goods">
+      <image src="../../images/qrxd/book.jpg"></image>
+    </view>
+    <view class="goods_name">{{bookname}}</view>
+    <view class="icon-tag2">   {{booktype}}</view>
+    <view class="icon-location">
+      <text>{{address}}</text>
+      <text class="support">支持自提</text>
+    </view>
+    <view class="price">
+      <text class="icon-YUAN-circle-fill">{{price}}</text>
+      <text class="num">×{{number}}</text>
+    </view>
+    <view class="distribution"  bindtap="another">
+      <text class="way">配送方式</text>
+      <text class="distribution_money">配送  ￥{{dis_money}}</text>
+      <text class="icon-youbian"></text>
+    </view>
+    <view class="underline"></view>
+    <view class="all_money">共{{number}}件商品 , 小计￥{{price+dis_money}}元</view>
+  </view>
+</view>
+<!-- 支付 -->
+<view class="afford">
+  <view class="afford_way">
+    <text>支付方式</text> <text>微信支付</text>
+  </view>
+  <view class="underline"></view>
+  <view class="place_order">
+    <view class="total">
+      合计： <text>￥{{price+dis_money}}</text>
+      <button bindtap="maskaccur">确认下单</button>
+    </view>
+    
+  </view>
+</view>
+<!-- 确认下单弹窗 -->
+<view class="mask" wx:if="{{showMask}}" bindtap="maskhidden"></view>
+<view class="confirm" wx:if="{{showMask}}">
+    <view class="confirm_payment">确认付款</view>
+    <view class="confirm_money">￥{{price+dis_money}}</view>
+    <view class="confirm_way">
+      <text>支付方式</text> <text>微信支付</text>
+    </view>
+    <view class="underline"></view>
+    <button class="confirm_afford">立即付款</button>
+  </view>
+

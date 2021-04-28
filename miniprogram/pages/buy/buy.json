@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "trade_item": "../../components/trade_item/trade_item",
+    "usermsg": "../../components/usermsg/usermsg"
+  },
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的买入",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light"
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "usermsg": "../../components/usermsg/usermsg",
+    "goodsdetails": "../../components/goodsdetails/goodsdetails"
+  }
+}

@@ -1,0 +1,71 @@
+/* pages/classify/classify.wxss */
+
+.all-classify {
+  width: 750rpx;
+  height: 136rpx;
+  font-size: 46rpx;
+  color: rgba(251, 250, 250, 100);
+  text-align: center;
+  line-height: 164rpx;
+  background-color: rgba(60, 179, 113, 88);
+}
+.box1 {
+  position: relative;
+  width: 950rpx;
+  height: 1212rpx;
+  background-color: #EDF1F2;
+  border-radius: 32rpx;
+  border: 2rpx solid rgba(255, 255, 255, 100);
+}
+.box2 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 66rpx;
+  width: 250rpx;
+  height: 802rpx;
+  /* background-color: pink; */
+}
+.box2 view {
+flex: 1;
+padding-top: 35rpx;
+text-align: center;
+font-size: 32rpx;
+}
+.box2 view:hover {
+  position: relative;
+  left: 30rpx;
+  width: 220rpx;
+  background-color: #fff;
+  border-radius: 32rpx 0px 0px 32rpx;
+}
+.box3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: absolute;
+  left: 253rpx;
+  top: 30rpx;
+  width: 496rpx;
+  height: 1150rpx;
+  background-color: #fff;
+  font-family: Arial;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  border: 2rpx solid rgba(255, 255, 255, 100);
+  border-radius: 32rpx 0px 0px 32rpx;
+}
+.box3 view {
+  flex: 50%;
+  height: 150rpx;
+  line-height: 150rpx;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+  text-align: center;
+  font-size: 32rpx;
+  /* background-color: green; */
+}
+.box1 .box3 view:nth-child(1):hover {
+  background-color: #EDFAF5;
+  border-radius: 32rpx 0rpx 0rpx 0rpx
+}
+.box3 view:hover {
+  background-color: #EDFAF5;
+}

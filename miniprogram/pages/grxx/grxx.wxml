@@ -1,0 +1,25 @@
+<!--pages/grxx/grxx.wxml-->
+<!-- 标题 -->
+<view class="title">个人信息</view>
+<!-- 信息栏 -->
+<form action="">
+  <view class="heaeder">
+    <image src="../../images/grxx/header.jpg"></image>
+  </view>
+<ul class="person">
+ <block wx:if="{{num==true}}">
+  <li>昵称<text>{{person_name}}</text></li>
+  <li>个性签名<view>{{sign}}</view></li>
+  <li>手机号<text>{{phone}}</text></li>
+  <li>学生认证 <text class="icon-youbian"></text></li>
+ </block>
+  <block wx:else>
+  <li>昵称<input type="text" value="{{person_name}}" bindinput='inputChange' data-name='person_name' /></li>
+  <li>个性签名<input type="text" value="{{sign}}"bindinput='inputChange' data-name='sign'/></li>
+  <li>手机号<text>{{phone}}</text></li>
+  <li>学生认证 <text class="icon-youbian"></text></li>
+</block>
+</ul>
+<!-- 修改按钮 -->
+<button form-type="button" hover-class="none" bindtap="cut" style="background-color:{{num==true?'#1C9E56':'#E64340'}}">{{num==true?'修改':'完成'}}</button>
+</form>

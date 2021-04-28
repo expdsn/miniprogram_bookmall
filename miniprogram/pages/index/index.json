@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "goodsitem": "../../components/goods_item/goods_item"
+  },
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "成工书城",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light"
+}

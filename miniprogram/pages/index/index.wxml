@@ -1,0 +1,72 @@
+<view class="index">
+  <view class="swiperstyle">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+        <!-- <block wx:for="{{background}}" wx:key="*this"> -->
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../../images/goodsitem/test.jpg"></image>
+          </swiper-item>
+        <!-- </block> -->
+      </swiper>
+      <view class="search_con">
+        <input class="search_con_text" type="text" placeholder="请输入关键字"></input>
+        <view class="search">Search</view>
+      </view>
+  </view>
+  <view class="tabbar">
+      <view class="item">
+        <view class="icon-tag"></view>
+        <view class="item_text">全部分类</view>
+      </view>
+      <view class="item">
+        <view class="icon-shu"></view>
+        <view class="item_text">教材教辅</view>
+      </view>
+      <view class="item">
+        <view class="icon-shu2"></view>
+        <view class="item_text">经管类</view>
+      </view>
+      <view class="item">
+        <view class="icon-jisuanji"></view>
+        <view class="item_text">计算机类</view>
+      </view>
+      <view class="item">
+        <view class="icon-shu3"></view>
+        <view class="item_text">文学类</view>
+      </view>
+      <view class="item">
+        <view class="icon-dianying"></view>
+        <view class="item_text">生活艺术</view>
+      </view>
+      <view class="item">
+        <view class="icon-banshou"></view>
+        <view class="item_text">机械类</view>
+      </view>
+      <view class="item">
+        <view class="icon-thin-_book_writi"></view>
+        <view class="item_text">人文社科</view>
+      </view>
+  </view>
+  <view class="title">
+    <view class="line1"></view>
+    <view class="center-con">
+      热搜书单
+    </view>
+    <view class="line2"></view>
+  </view>
+  <view class="recommand">猜你喜欢</view>
+  <view class="goods_con">
+  <block wx:for='{{booklist}}' wx:key='index'>
+    <goodsitem item="{{item}}" bindtap="gopage" data-url="../goodsdetails/goodsdetails"></goodsitem>
+    <!-- <view>{{item.name}}</view> -->
+  </block>
+  </view>
+</view>

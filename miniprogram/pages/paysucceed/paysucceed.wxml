@@ -1,0 +1,14 @@
+<view class="paysucceed">
+  <view class="icon-dui"></view>
+  <view class="share_text">分享</view>
+  <view class="line1"></view>
+  <view class="imgs">
+    <view class="icon-pengyouquan"></view>
+    <view class="icon-weixin"></view>
+    <view class="icon-qq"></view>
+    <view class="icon-weibo"></view>
+  </view>
+  <view class="line2"></view>
+  <view class="lookorder">查看订单</view>
+  <view class="goback">返回主页</view>
+</view>

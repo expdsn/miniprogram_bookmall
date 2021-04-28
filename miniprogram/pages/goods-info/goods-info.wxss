@@ -1,0 +1,175 @@
+/* pages/goods-info/goods-info.wxss */
+@import "../../iconfont.wxss";
+
+.icon-zuobian{
+  position: absolute;
+  left: 38rpx;
+  top: 112rpx;
+  width: 40rpx;
+  height: 40rpx;
+  font-family: 'iconfont';
+}
+.information {
+  position: absolute;
+  left: 296rpx;
+  top: 104rpx;
+  width: 160rpx;
+  height: 56rpx;
+  color: rgba(80, 85, 89, 100);
+  font-size: 40rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+}
+ul li,span {
+  border-bottom: 2rpx solid #E1E3E6;
+}
+
+/* 基本信息，添加照片，商品描述的通用 */
+.base,
+.add-photo,
+.items-descript {
+  position: absolute;
+  left: 38rpx;
+  width: 160rpx;
+  height: 56rpx;
+  color: rgba(222, 125, 44, 100);
+  font-size: 40rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+  border-bottom: none;
+}
+.base {
+  width: 620rpx;
+  height: 652rpx;
+  left: 61rpx;
+  top: 196rpx;
+  display: flex;
+  flex-direction: column;
+}
+.base view {
+  flex: 1;
+  line-height: 75rpx;
+  border-bottom: 2rpx solid #E1E3E6;
+}
+/* 书名 */
+.book-name {
+  font-size: 36rpx;
+  margin-left: 10rpx;
+  padding-bottom: 10rpx;
+  /* vertical-align: middle; */
+  color: rgba(16, 16, 16, 100);
+  font-family: PingFangSC-regular;
+  
+}
+.book-name1,
+.select {
+position: absolute;
+left: 200rpx;
+color: rgba(80, 85, 89, 100);
+font-size: 36rpx;
+text-align: left;
+font-family: PingFangSC-regular;
+}
+/* 必选 */
+.select {
+  color: rgba(194, 199, 204, 100);
+}
+
+/* 右边箭头 */
+.icon-youbian {
+  font-family: 'iconfont';
+  position: absolute;
+  right: 20rpx;
+  font-size: 40rpx;
+}
+/* 添加图片 */
+.add-photo {
+  position: absolute;
+  left: 30rpx;
+  top: 860rpx;
+  width: 680rpx;
+  height: 310rpx;
+  padding-left: 27rpx;
+}
+
+.photo {
+position: relative;
+width: 150rpx;
+height: 150rpx;
+margin-left: 40rpx;
+margin-top: 20rpx;
+}
+.photo image {
+  width: 100%;
+  height: 100%;
+}
+.cover {
+position: absolute;
+top: -20rpx;
+right: -20rpx;
+width: 76rpx;
+height: 34rpx;
+border-radius: 20rpx;
+background-color: rgba(222, 125, 44, 100);
+color: rgba(255, 255, 255, 100);
+font-size: 28rpx;
+text-align: center;
+font-family: Microsoft Yahei;
+border: 2rpx solid rgba(255, 255, 255, 100);
+}
+.plus-sign {
+  margin-top: -140rpx;
+  margin-left: 270rpx;
+  width: 116rpx;
+  height: 116rpx;
+  line-height: 40rpx;
+  text-align: center;
+  border: 2rpx solid rgba(204, 204, 204, 100);
+}
+.icon-tianjia1 {
+font-size: 60rpx;
+line-height: 116rpx;
+font-family: 'iconfont';
+border-bottom: none;
+}
+/* 商品描述 */
+
+.items-descript {
+  top: 1180rpx;
+  left: 53rpx;
+}
+/* 输入对商品的描述 */
+.input-descript {
+  margin: 20rpx 0 0 30rpx;
+  width: 600rpx;
+  height: 200rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background-color: rgba(255, 255, 255, 100);
+  color: rgba(16, 16, 16, 100);
+  font-size: 28rpx;
+  text-align: left;
+  font-family: Arial;
+  border: 2rpx solid rgba(187, 187, 187, 100);
+}
+textarea {
+  width: 600rpx;
+  height: 200rpx;
+}
+/* 出价 */
+.get-price {
+  position: absolute;
+  left: 85rpx;
+  top: 1505rpx;
+  width: 560rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-radius: 32rpx;
+  background-color: rgba(28, 158, 86, 100);
+  color: rgba(255, 255, 255, 100);
+  font-size: 40rpx;
+  text-align: center;
+  box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(0, 0, 0, 0.4);
+  font-family: Microsoft Yahei;
+  border: 2rpx solid rgba(255, 255, 255, 100);
+}

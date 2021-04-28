@@ -1,0 +1,41 @@
+<!--pages/sjzy/sjzy.wxml-->
+<!-- 这里是商家主页 -->
+<!-- 商家头部简介 -->
+<view class="instruct">
+  <view class="head">
+      <image src="../../images/sjzy/head.jpg"></image>
+    </view>
+    <view class="uname">{{netname}}</view>
+    <view class="just">刚刚来过</view>
+    <view class="sign">{{sign}}</view>
+    <view class="icon-approve">学生认证</view>
+</view>
+
+<!-- 下划线 -->
+<view class="underline"></view>
+
+<!-- 他的交易 -->
+<view class="trade">
+  <view class="title">Ta的交易</view>
+  <view class="goods">
+    <!-- 在售商品 -->
+  <view class="goods_zaishou">
+    <view class="num">{{num_1}}</view>
+    <view>在售商品</view>
+  </view>
+  <!-- 已售商品 -->
+  <view class="goods_yishou">
+    <view class="num">{{num_2}}</view>
+    <view>已售商品</view>
+  </view>
+  </view>
+</view>
+<!-- 他的评价 -->
+<view class="judge">
+  <view class="title">他的评价</view>
+  <ul>
+    <li>好评率 <text>{{percentage}}</text></li>
+    <li>发货速度<text>{{rapid}}</text></li>
+    <li>商品互动率<text>{{comunicate}}</text></li>
+  </ul>
+</view>

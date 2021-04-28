@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "hotbooks_item": "../../components/hotbooks_item/hotbooks_item"
+  },
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "热搜书单",
+  "backgroundColor": "#ffffff",
+  "backgroundTextStyle": "light"
+}

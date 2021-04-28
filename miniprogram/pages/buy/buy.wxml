@@ -1,0 +1,11 @@
+<view class="buy">
+  <view class="status_con">
+    <block wx:for='{{status_list}}' wx:key='index'>
+      <view class="{{currentindex==index?'itemactive':'item'}}" bindtap="change" data-index="{{index}}">{{item}}</view>
+    </block>
+  </view> 
+  <usermsg></usermsg>
+  <block wx:for='{{tradelist}}' wx:key='index'>
+    <trade_item item="{{item}}"></trade_item>
+  </block>
+</view>

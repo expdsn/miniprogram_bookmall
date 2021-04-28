@@ -1,0 +1,23 @@
+<!--pages/classify/classify.wxml-->
+<view class="all-classify">全部分类</view>
+<view class="box1">
+  <view class="box2">
+    <view>教材教辅</view>
+    <view>文学小说</view>
+    <view>经管励志</view>
+    <view>人文社科</view>
+    <view>生活艺术</view>
+    <view>计算机类</view>
+    <view>职业技能</view>
+  </view>
+  <view class="box3">
+    <view>考研</view>
+    <view>大学教材</view>
+    <view>英语学习</view>
+    <view>资格考试</view>
+    <view>小学教辅</view>
+    <view>初中教辅</view>
+    <view>高中教辅</view>
+    <view>字典词典</view>
+  </view>
+</view>

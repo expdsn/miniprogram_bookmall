@@ -1,0 +1,13 @@
+<view class="usermsg">
+  <view class="imgcon">
+    <image src="../../images/goodsitem/test.jpg" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">boboupgo</view>
+    <view class="descript">刚刚来过</view>
+  </view>
+  <view class="auth">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+</view>

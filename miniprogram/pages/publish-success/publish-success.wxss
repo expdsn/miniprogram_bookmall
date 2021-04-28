@@ -1,0 +1,49 @@
+/* pages/publish-success/publish-success.wxss */
+@import "../../iconfont.wxss";
+/* 对符号 */
+.icon-ziyuanldpi {
+  font-family: 'iconfont';
+  font-size: 120rpx;
+  color: rgba(85, 193, 68, 100);
+  position: absolute;
+  left: 290rpx;
+  top: 256rpx;
+  width: 152rpx;
+  height: 152rpx;
+  background-color: transparent;
+}
+/* 发布成功 */
+.success {
+  position: absolute;
+  left: 211rpx;
+  top: 438rpx;
+  color: rgba(183, 180, 180, 100);
+  font-size: 72rpx;
+  text-align: left;
+  font-family: PingFangSC-bold;
+}
+/* 继续卖书和返回主页的通用样式 */
+.base {
+  position: absolute;
+  left: 82rpx;
+  width: 560rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-radius: 32rpx;
+  color: rgba(255, 255, 255, 100);
+  font-size: 40rpx;
+  text-align: center;
+  box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(0, 0, 0, 0.4);
+  font-family: Microsoft Yahei;
+  border: 2rpx solid rgba(255, 255, 255, 100);
+}
+/* 继续卖书 */
+.continue-sales {
+  top: 823rpx;
+  background-color: rgba(222, 125, 44, 100);
+}
+/* 返回主页 */
+.return-menu {
+  top: 976rpx;
+  background-color: rgba(28, 158, 86, 100);
+}

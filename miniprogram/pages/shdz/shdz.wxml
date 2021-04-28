@@ -1,0 +1,27 @@
+<!--pages/shdz/shdz.wxml-->
+<view class="recieve">收货地址 </view>
+<!-- 添加地址按钮 -->
+<view class="icon-tianjia" bindtap="add"></view>
+<!-- 收货地址表 -->
+<!-- <block wx:if="{{exist==true}}"> -->
+<block wx:for='{{locallist}}' wx:key='index'>
+<view class="inform">
+  <!-- 姓名电话 -->
+    <view class="inform_my">
+      <text class="my_name">{{item.uname}}</text>
+      <text class="my_phone">{{item.phone}}</text>
+    </view>
+    <!-- 收货地址 -->
+    <view class="inform_address">
+      <view class="address_big">{{item.big_address}}</view>
+      <view class="address_little">{{item.little_address}}</view>
+    </view>
+    <!-- 编辑 删除 -->
+    <view class="inform_default">
+      <view class="icon-dui">默认地址</view>
+      <view class="default_edit" bindtap="edit">编辑</view>
+      <view class="default_delete" bindtap="delete">删除</view>
+    </view>
+  <!-- </block> -->
+</view>
+</block>

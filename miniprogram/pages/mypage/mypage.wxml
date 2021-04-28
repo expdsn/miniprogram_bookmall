@@ -1,0 +1,43 @@
+<!--pages/mypage/mypage.wxml-->
+<!-- 个人信息 -->
+<view class="my" bindtap="grxx">
+  <view class="my_header">
+    <image src="../../images/mypage/myheaeder.jpg"></image>
+  </view>
+  <view class="my_name">{{myname}}</view>
+</view>
+
+<!-- 个人栏目 -->
+<ul class="self">
+  <li bindtap="gopage" data-url="../sealing/sealing">
+    <view class="icon-tag1"></view>
+    <view>我的在售</view>
+  </li>
+  <li bindtap="gopage" data-url="../seal/seal">
+    <view class="icon-qian4"></view>
+    <view>我的已售</view>
+  </li>
+  <li bindtap="gopage" data-url="../buy/buy">
+    <view class="icon-mairu"></view>
+    <view>我的买入</view>
+  </li>
+  <li bindtap="gopage" data-url="../want/want">
+    <view class="icon-shoucang1"></view>
+    <view>我的想要</view>
+  </li>
+</ul>
+<!-- 其余功能 -->
+<ul class="func">
+  <li class="func_imform" bindtap="grxx">
+    <text>个人信息</text>
+    <text class="icon-shezhi"></text>
+  </li>
+  <li class="func_addresa" bindtap="shdz">
+    <text>收货地址</text>
+    <text class="icon-location"></text>
+  </li>
+  <li class="func_consult">
+    <text>客服中心</text>
+    <text class="icon-service"></text>
+  </li>
+</ul>

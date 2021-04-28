@@ -1,0 +1,25 @@
+.want .status_con {
+  width: 702rpx;
+  height: 70rpx;
+  margin-left: 24rpx;
+  line-height: 70rpx;
+  border-radius: 32rpx;
+  text-align: center;
+  box-shadow: 0px 4rpx 8rpx 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 22rpx;
+  margin-top: 24rpx;
+}
+.want .status_con .itemactive {
+  color: #de7d2c;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}
+.want .status_con .item {
+  color: #505559;
+  font-size: 28rpx;
+  text-align: left;
+  font-family: PingFangSC-regular;
+}

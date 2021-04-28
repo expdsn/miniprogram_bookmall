@@ -1,0 +1,71 @@
+/* pages/publish/publish.wxss */
+page {
+  background-color: #fff;
+}
+.publish {
+  left: 0rpx;
+  top: 0rpx;
+  width: 100%;
+  height: 168rpx;
+  line-height: 225rpx;
+  background-color: rgba(60, 179, 113, 88);
+  color: rgba(16, 16, 16, 100);
+  font-size: 46rpx;
+  text-align: center;
+  font-family: Arial;
+  color: aliceblue;
+  border: 1px solid rgba(255, 255, 255, 100);
+  }
+  .write {
+    float: left;
+    /* left: 22rpx;
+  top: 155rpx; */
+  margin-top: 180rpx;
+  width: 250rpx;
+  height: 112rpx;
+  color: rgba(38, 198, 109, 88);
+  font-size: 40rpx;
+  text-align: left;
+  color: #41CD7F;
+  font-family: PingFangSC-bold;
+  margin-left: 40rpx;
+  }
+  .write1 {
+  float: left;
+  width: 420rpx;
+  height:403.2rpx;
+  margin-left: 20rpx;
+  }
+  .scan {
+  position: absolute;
+  left: 40rpx;
+  top: 1420rpx;
+  width: 300rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-radius: 150rpx;
+  background-color: #1C9E56;
+  background-color: rgba(28, 158, 86, 100);
+  color: rgba(255, 255, 255, 100);
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  font-family: Microsoft Yahei;
+  border: 1px solid rgba(255, 255, 255, 100);
+  }
+  .input{
+  position: absolute;
+  right: 40rpx;
+  top: 1420rpx;
+  width: 300rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  border-radius: 150rpx;
+  background-color: rgba(194, 199, 204, 100);
+  color: rgba(80, 85, 89, 100);
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  font-family: Microsoft Yahei;
+  border: 1px solid rgba(255, 255, 255, 100);
+  }

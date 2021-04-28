@@ -1,0 +1,12 @@
+<!--pages/add_address/add_address.wxml-->
+<view class="title">添加收货地址</view>
+  <form action="">
+    <ul class="add">
+      <li>收货人姓名<input type="text" placeholder="请输入姓名"/></li>
+      <li>手机号码<input type="text" placeholder="请输入电话"/></li>
+      <li>所在校区<text class="icon-youbian"></text></li>
+      <li>详细地址<input type="text" placeholder="请输入地址"/></li>
+      <li>设置为默认地址<view class="choose {{num==1?'grey':'green'}}" bindtap="cut"><view class="circle right {{num==1?'left':'right'}}"></view></view></li>
+    </ul>
+    <button class="sure" bindtap="sure">保存</button>
+  </form>
