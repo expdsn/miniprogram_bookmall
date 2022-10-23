@@ -1,0 +1,64 @@
+@import "../../iconfont.wxss";
+.panel-title{
+  margin-bottom: 20rpx;
+}
+.ui-uploader-cell-other {
+  width: 690rpx;
+  padding: 40rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* justify-content: flex-start; *//* align-items: center; */
+  margin-left: 92rpx;
+}
+ 
+.ui-uploader-cell {
+  width: 690rpx;
+  /* padding: 20rpx 0; */
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 92rpx;
+}
+ 
+.ui-uploader-item {
+  width: 118rpx;
+  height: 118rpx;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  padding-bottom: 2rpx;
+  padding-right: 2rpx;
+  position: relative;
+}
+ 
+.title2 {
+  width: 520rpx;
+  display: flex;
+  align-items: center;
+}
+ 
+.ui-uploader-item-icon {
+  position: absolute;
+  right: 0;
+}
+ 
+.ui-uploader {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0rpx 40rpx 0 rgba(0, 0, 0, 0.08);
+}
+.img{
+  width: 116rpx;
+  height: 116rpx;
+}
+.icon-tianjia1{
+  font-family: 'iconfont';
+  font-size: 56rpx;
+}

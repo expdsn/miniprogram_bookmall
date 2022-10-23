@@ -1,72 +1,99 @@
-<view class="index">
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="index" wx:if="{{!loading}}">
   <view class="swiperstyle">
     <swiper indicator-dots="{{indicatorDots}}"
             autoplay="{{autoplay}}" 
             interval="{{interval}}" 
             duration="{{duration}}">
-        <!-- <block wx:for="{{background}}" wx:key="*this"> -->
-          <swiper-item>
-            <image src="../../images/goodsitem/test.jpg"></image>
+          <swiper-item wx:for="{{adList}}" wx:key="index" bindtap="toMiniPro" data-index="{{index}}">
+            <view class="ad-container">
+              <image mode="aspectFit" class="ad" src="{{item.url}}"></image>
+              
+            </view>
           </swiper-item>
-          <swiper-item>
-            <image src="../../images/goodsitem/test.jpg"></image>
-          </swiper-item>
-          <swiper-item>
-            <image src="../../images/goodsitem/test.jpg"></image>
-          </swiper-item>
-        <!-- </block> -->
+       
       </swiper>
-      <view class="search_con">
-        <input class="search_con_text" type="text" placeholder="请输入关键字"></input>
-        <view class="search">Search</view>
+      <view class="search_con" bindtap="toSearch">
+        <view class="search_con_text" >
+          <image src="../../images/search.png" class="search-icon"></image>
+          <text class="search-text">搜一搜</text>
+        </view>
       </view>
   </view>
   <view class="tabbar">
-      <view class="item">
+      <view class="item" bindtap="toClassify">
         <view class="icon-tag"></view>
         <view class="item_text">全部分类</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[0,0]}}">
         <view class="icon-shu"></view>
-        <view class="item_text">教材教辅</view>
+        <view class="item_text">考研用书</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[0,1]}}">
         <view class="icon-shu2"></view>
-        <view class="item_text">经管类</view>
+        <view class="item_text">等级考试</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[1,2]}}">
         <view class="icon-jisuanji"></view>
         <view class="item_text">计算机类</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[2,0]}}">
         <view class="icon-shu3"></view>
-        <view class="item_text">文学类</view>
+        <view class="item_text">经典名著</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[2,1]}}">
         <view class="icon-dianying"></view>
-        <view class="item_text">生活艺术</view>
+        <view class="item_text">科幻小说</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[1,5]}}">
         <view class="icon-banshou"></view>
         <view class="item_text">机械类</view>
       </view>
-      <view class="item">
+      <view class="item" bindtap="toClassifyList" data-classify="{{[1,4]}}">
         <view class="icon-thin-_book_writi"></view>
-        <view class="item_text">人文社科</view>
+        <view class="item_text">经管类</view>
       </view>
   </view>
   <view class="title">
     <view class="line1"></view>
     <view class="center-con">
-      热搜书单
+      猜你喜欢
     </view>
     <view class="line2"></view>
   </view>
-  <view class="recommand">猜你喜欢</view>
-  <view class="goods_con">
-  <block wx:for='{{booklist}}' wx:key='index'>
-    <goodsitem item="{{item}}" bindtap="gopage" data-url="../goodsdetails/goodsdetails"></goodsitem>
-    <!-- <view>{{item.name}}</view> -->
-  </block>
+  <view class="father">
+      <view class="seq">
+    <view class="book-goods"  wx:for="{{freeGoodsList}}" wx:key="index" wx:if="{{index%2==0}}" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img" ><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if='{{item.userInfo.authorizeStatus==3}}'></text>
+        </view>
+      </view>
+    </view>
+       </view>
+  <view class="seq" >
+    <view class="book-goods" wx:for="{{freeGoodsList}}" wx:if="{{index%2==1}}" wx:key="index" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img"><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if="{{item.userInfo.authorizeStatus==3}}"></text>
+        </view>
+      </view>
+    </view>
   </view>
+    </view>
 </view>

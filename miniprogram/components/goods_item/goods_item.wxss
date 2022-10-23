@@ -184,11 +184,12 @@
   margin-left: 22rpx;
   margin-right: 22rpx;
   margin-top: 30rpx;
+  background-color: #FFFFFF;
+
 }
 .goods_item .goodsimg_con {
   width: 320rpx;
   height: 320rpx;
-  background-color: #FFFFFF;
 }
 .goods_item .goodsimg_con .goodsimg {
   width: 280rpx;

@@ -1,0 +1,18 @@
+
+<view class="panel-title"></view>
+  <view class="{{uploaderList.length === 0 ? 'ui-uploader-cell':'ui-uploader-cell-other'}}">
+    <!-- 根据已选择的图片临时路径数组展示图片-->
+    <view class='ui-uploader-item' wx:for="{{uploaderList}}" wx:key="index">
+      <!-- 删除-->
+      <icon class='ui-uploader-item-icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="#fff" />
+      <!-- 图片-->
+      <image class="img" mode="aspectFill" bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+    </view>
+    <!-- 上传按钮+框 -->
+    
+    <view class='ui-uploader' bindtap='upload' wx:if="{{showUpload}}">
+      <!-- <image src="/images/update_img.png"></image> -->
+      <view class="icon-tianjia1"></view>  
+    </view>
+    <view wx:if="{{uploaderList.length === 0}}" class="title2">{{desc}}</view>
+  </view>
