@@ -11,5 +11,5 @@
 npm install 
 ```
 ##### 直接引入
-或者直接引入该地址下[timetables.min.js](https://github.com/Hzy0913/Timetable/tree/master/exampel/Timetables.min.js "Timetables.min.js")
+
 ## 使用
