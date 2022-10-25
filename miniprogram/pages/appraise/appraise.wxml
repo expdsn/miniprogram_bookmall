@@ -1,0 +1,11 @@
+<view class="appraise"> 
+  <view class="star">
+    <view class="good {{index==0?'selected':''}}" bindtap="change" data-index="0">好评</view>
+    
+    <view class="bad {{index==1?'selected':''}}" bindtap="change" data-index="1">差评</view>
+  </view>
+  <view class="descript">
+    <textarea name="desc" class="contents" placeholder="聊聊本次交易的感受，你的评价能帮助到其他人" bindinput="inputing"></textarea>
+  </view>
+  <button class="submit-btn" disabled="{{submitting}}" type="primary" bindtap="submit">发布评价</button>
+</view>
