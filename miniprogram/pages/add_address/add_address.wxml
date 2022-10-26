@@ -1,12 +1,17 @@
 <!--pages/add_address/add_address.wxml-->
 <view class="title">添加收货地址</view>
-  <form action="">
+  <form catchsubmit="formSubmit">
     <ul class="add">
-      <li>收货人姓名<input type="text" placeholder="请输入姓名"/></li>
-      <li>手机号码<input type="text" placeholder="请输入电话"/></li>
-      <li>所在校区<text class="icon-youbian"></text></li>
-      <li>详细地址<input type="text" placeholder="请输入地址"/></li>
-      <li>设置为默认地址<view class="choose {{num==1?'grey':'green'}}" bindtap="cut"><view class="circle right {{num==1?'left':'right'}}"></view></view></li>
+      <li>收货人姓名<input type="text" name="uname" placeholder="请输入姓名"/></li>
+      <li>手机号码<input type="text" name="phone" placeholder="请输入电话"/></li>
+      
+      <li>所在校区
+        <picker bindchange="bindPickerChange" name="school_index" value="index" range="{{school_list}}">
+          <text>{{school_list[index]}}</text>
+          <text class="icon-youbian"></text>
+      </picker></li>
+      <li>详细地址<input name="detailAddress" type="text" placeholder="请输入地址"/></li>
+      <li>设置为默认地址<view class="choose {{!isDefault?'grey':'green'}}" bindtap="cut"><view class="circle right {{!isDefault?'left':'right'}}"></view></view></li>
     </ul>
-    <button class="sure" bindtap="sure">保存</button>
+    <button class="sure" form-type="submit" disabled="{{submitting}}">保存</button>
   </form>
