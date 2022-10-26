@@ -1,0 +1,190 @@
+{
+  "setting": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/hotbooks/hotbooks",
+          "pathName": "pages/hotbooks/hotbooks",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/paysucceed/paysucceed",
+          "pathName": "pages/paysucceed/paysucceed",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/buy/buy",
+          "pathName": "pages/buy/buy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/want/want",
+          "pathName": "pages/want/want",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/seal/seal",
+          "pathName": "pages/seal/seal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sealing/sealing",
+          "pathName": "pages/sealing/sealing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/otherseal/otherseal",
+          "pathName": "pages/otherseal/otherseal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shdz/shdz",
+          "pathName": "pages/shdz/shdz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/qrxd/qrxd",
+          "pathName": "pages/qrxd/qrxd",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodsdetails/goodsdetails",
+          "pathName": "pages/goodsdetails/goodsdetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods-descript/goods-descript",
+          "pathName": "pages/goods-descript/goods-descript",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/classify/classify",
+          "pathName": "pages/classify/classify",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goodslist/goodslist",
+          "pathName": "pages/goodslist/goodslist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/publish-detail/publish-detail",
+          "pathName": "pages/publish-detail/publish-detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/root/index/index",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/root/book_list/book_list",
+          "pathName": "pages/root/book_list/book_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find",
+          "pathName": "pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/publish-detail/publish-detail",
+          "pathName": "pages/publish-detail/publish-detail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods-info/goods-info",
+          "pathName": "pages/goods-info/goods-info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/find/find",
+          "pathName": "pages/find/find",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods-info/goods-info",
+          "pathName": "pages/goods-info/goods-info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sealing/sealing",
+          "pathName": "pages/sealing/sealing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mypage/mypage",
+          "pathName": "pages/mypage/mypage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shdz/shdz",
+          "pathName": "pages/shdz/shdz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add_address/add_address",
+          "pathName": "pages/add_address/add_address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods-info/goods-info",
+          "pathName": "pages/goods-info/goods-info",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/appraise/appraise",
+          "pathName": "pages/appraise/appraise",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shopping-cart/shopping-cart",
+          "pathName": "pages/shopping-cart/shopping-cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shopping-cart/shopping-cart",
+          "pathName": "pages/shopping-cart/shopping-cart",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

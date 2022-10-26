@@ -1,0 +1,24 @@
+<view class="login" wx:if="{{!hasUserInfo}}" >
+
+
+  <view class="logo">
+    <image src="../../images/logo.png"></image>
+  </view>
+  <view class="login-btn">
+  <button  type="primary" bindtap="getUserProfile" >快捷登录
+  </button>
+  
+  </view>
+</view>
+<view class="login" wx:if="{{isRootLogin}}" >
+
+
+<view class="logo">
+  <image src="../../images/logo.png"></image>
+</view>
+<view class="login-btn">
+<button  type="primary" bindtap="intoProgram" >进入小程序
+</button>
+<button class="login-btn" bindtap="intoController" type="warn">进入控制台</button>
+</view>
+</view>

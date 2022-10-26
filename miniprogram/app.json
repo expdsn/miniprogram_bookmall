@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/hotbooks/hotbooks",
     "pages/paysucceed/paysucceed",
@@ -16,49 +17,65 @@
     "pages/sjzy/sjzy",
     "pages/mypage/mypage",
     "pages/goods-info/goods-info",
-    "pages/goodsdetails/goodsdetails",
     "pages/publish-success/publish-success",
-    "pages/classify/classify", 
-    "pages/publish-detail/publish-detail",
+    "pages/classify/classify",
     "pages/shopping-cart/shopping-cart",
     "pages/publish/publish",
-    "pages/goods-descript/goods-descript"
+    "pages/student_auth/authrize",
+    "pages/root/index/index",
+    "pages/root/user_list/user_list",
+    "pages/root/book_list/book_list",
+    "pages/root/edit_scan_book/edit_scan_book",
+    "pages/root/auto_scan_book/auto_scan_book",
+    "pages/find/find",
+    "pages/goods-detail/goods-detail",
+    "pages/choose_address/choose_address",
+    "pages/appraise/appraise",
+    "pages/check_appraise/check_appraise",
+    "pages/search/search",
+    "pages/classify_list/classify_list",
+    "pages/user_info/user_info",
+    "pages/about/about"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "cdtu old books",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2",
-  "tabBar":{
+  "tabBar": {
     "list": [
-     
       {
-        "pagePath":"pages/index/index",
+        "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/home(3).png",
-        "selectedIconPath": "images/home(4).png"
+        "iconPath": "images/home3.png",
+        "selectedIconPath": "images/home4.png"
       },
       {
-        "pagePath":"pages/classify/classify",
-        "text": "分类",
+        "pagePath": "pages/find/find",
+        "text": "发现",
         "iconPath": "images/tag.png",
-        "selectedIconPath": "images/tag(1).png" 
+        "selectedIconPath": "images/tag(1).png"
       },
       {
-        "pagePath":"pages/shopping-cart/shopping-cart",
-        "text": "购物车",
+        "pagePath": "pages/publish/publish",
+        "text": "卖书",
+        "iconPath": "images/sell1.png",
+        "selectedIconPath": "images/sell.png"
+      },
+      {
+        "pagePath": "pages/shopping-cart/shopping-cart",
+        "text": "消息",
         "iconPath": "images/shopping-cart(1).png",
-        "selectedIconPath": "images/shopping-cart.png" 
+        "selectedIconPath": "images/shopping-cart.png"
       },
       {
-        "pagePath":"pages/mypage/mypage",
+        "pagePath": "pages/mypage/mypage",
         "text": "我的",
-        "iconPath": "images/tag.png",
-        "selectedIconPath": "images/tag(1).png" 
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine1.png"
       }
     ]
   }
