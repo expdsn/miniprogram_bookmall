@@ -6,5 +6,5 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   return await db.collection('alert_list').where({
     alerter: event.alerter
-  }).orderBy('time', 'desc').get()
+  }).get()
 }

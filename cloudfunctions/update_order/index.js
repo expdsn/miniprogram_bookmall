@@ -14,7 +14,6 @@ exports.main = async (event, context) => {
     })
     .update({
       data: {
-        //状态： 0 待发货 1 待收货 2待评价 3 完成 -1 失败
         status : event.status,
         orderTime : new Date()
       },

@@ -1,5 +1,5 @@
 {
-  "name": "get_seal_list_by_index",
+  "name": "get_buyin_list_by_index",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

@@ -11,7 +11,11 @@ exports.main = async (event) => {
   try {
     return await db.collection('authrize_list').where({
       _openid : event.openid
-    }).remove()
+    }).update({
+      data : {
+        isAuthorized : true
+      }
+    })
   } catch(e) {
     console.error(e)
   }

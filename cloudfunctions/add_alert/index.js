@@ -11,10 +11,8 @@ exports.main = async (event, context) => {
         alerter : event.alerter,
         _openid : event.openid,
         msg : event.msg,
-        type: event.type,
+        pop: event.pop,
         read: event.read,
-        avatarUrl : event.avatarUrl,
-        nickName: event.nickName,
         time : new Date()
       }
     })

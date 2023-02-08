@@ -7,7 +7,6 @@ exports.main = async (event, context) => {
   return await db.collection('alert_list').where({
     alerter: event.alerter,
     _openid : event.openid,
-    read: false,
-    type: 0
+    read: false
   }).get()
 }
