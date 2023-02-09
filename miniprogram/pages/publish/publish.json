@@ -1,4 +1,8 @@
 {
   "usingComponents": {},
-  "navigationStyle":"custom"
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发布书籍",
+  "backgroundColor": "#3CB371",
+  "backgroundTextStyle": "light"
 }

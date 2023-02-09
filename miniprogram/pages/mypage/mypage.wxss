@@ -1,30 +1,67 @@
 /* pages/mypage/mypage.wxss */
 @import "../../iconfont.wxss";
+@import "./mypage.skeleton.wxss";
+
 /* 个人信息 */
 .my {
   width: 100%;
   height: 260rpx;
-  background-color: #A7DAA9;
+  background-color: #3CB371;
   border-radius: 0 0 130rpx 130rpx;
 }
 .my_header {
   float:left;
   margin: 60rpx 0 0 48rpx;
-  width: 110rpx;
-  height: 110rpx;
+  width: 150rpx;
+  height: 150rpx;
   border-radius: 50%;
   background-color: pink;
   overflow: hidden;
 }
+
 .my_header image {
   width: 100%;
   height: 100%;
 }
+
 .my_name {
+  position: relative;
   float: left;
-  margin: 80rpx 0 0 20rpx;
-  font-size: 40rpx;
+  margin: 90rpx 0 0 30rpx;
+  font-size: 60rpx;
   color: #fff;
+
+}
+.nickname{
+  float: left;
+}
+.auth_tag{
+  width: 140rpx;
+  padding: 6rpx 0;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform:translate(100%,-50%);
+  font-size: 24rpx;
+  background-color: #DE7D2C;
+  border: 1px solid #DE7D2C;
+  border-radius: 10px;
+  font-family: 'iconfont';
+}
+.no_auth_tag{
+  padding: 6rpx 8rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform:translate(100%,-50%);
+  font-size: 24rpx;
+  background-color: #978e8e;
+  border-radius: 10px;
+  font-family: 'iconfont';
+}
+.auth_tag:before {
+  content: "\e695";
 }
 /* 个人栏目 */
 .self {

@@ -1,13 +1,48 @@
-<view class="want">
-  <view class="buy">
-  <view class="status_con">
-    <block wx:for='{{status_list}}' wx:key='index'>
-      <view class="{{currentindex==index?'itemactive':'item'}}" bindtap="change" data-index="{{index}}">{{item}}</view>
-    </block>
-  </view>
-  <usermsg></usermsg>
+<import src="want.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="want"  wx-if="{{!loading}}">
   <block wx:for='{{tradelist}}' wx:key='index'>
-    <trade_item item="{{item}}"></trade_item>
-  </block>
+  <view class="usermsg">
+  <view class="imgcon">
+    <image src="{{item.userInfo.avatarUrl}}" mode="aspectFill" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">{{item.userInfo.nickName}}</view>
+    <view class="descript">{{item.userInfo.sign}}</view>
+  </view>
+  <view class="auth" wx:if="{{item.userInfo.authorizeStatus == 3}}">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+
+
 </view>
+      <view class="trade_item">
+    <view class="img_con">
+      <image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}" class="img"></image>
+    </view>
+    <view class="msg_con">
+      <view class="bookname">{{item.bookInfo.bookName}}</view>
+      <view class="new">
+        <view class="new_text">{{item.desc}}</view>
+      </view>
+      <view class="new">
+        <view class="icon-tag"></view>
+        <view class="new_text">{{classifyStringList[index]}}</view>
+      </view>
+      <view class="charge">
+        <view class="charge_text">￥{{item.goodPrice}}</view>
+      </view>
+
+
+      <view class="status_btn">
+        <view class="btn-left" bindtap="remove" data-id="{{item._id}}">移除收藏</view>
+        <view class="btn-right" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">查看详情</view>
+      </view>
+ 
+    </view>
+    
+  </view>
+
+  </block>
 </view>

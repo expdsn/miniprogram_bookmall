@@ -1,6 +1,48 @@
 <view class="otherseal">
-  <usermsg class="msgcon"></usermsg>
+  <view class="usermsg">
+  <view class="imgcon">
+    <image src="../../images/goodsitem/test.jpg" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">boboupgo</view>
+    <view class="descript">刚刚来过</view>
+  </view>
+  <view class="auth">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+
+
+</view>
   <block wx:for='{{tradelist}}' wx:key='index'>
-    <trade_item item="{{item}}"></trade_item>
+      <view class="trade_item">
+    <view class="img_con">
+      <image src="../../images/goodsitem/test.jpg" class="img"></image>
+    </view>
+    <view class="msg_con">
+      <view class="bookname">{{item.bookname}}</view>
+      <view class="descript">{{item.descript}}</view>
+      <view class="new">
+        <view class="icon-tag"></view>
+        <view class="new_text">{{item.new}}</view>
+      </view>
+      <view class="charge">
+        <view class="icon-location"></view>
+        <view class="charge_text">{{item.charge}}</view>
+      </view>
+      <view class="condition">{{item.condition}}</view>
+      <view class="status_con" wx-if="{{item.type==0}}">
+        <view class="left">联系卖家</view>
+        <view class="right">评价</view>
+      </view>
+      <view class="status_con" wx-if="{{item.type==1}}">
+        <view class="left">联系卖家</view>
+        <view class="right">马上买</view>
+      </view>
+  
+    </view>
+    
+  </view>
+
   </block>
 </view>

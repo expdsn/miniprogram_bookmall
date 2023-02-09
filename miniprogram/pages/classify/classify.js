@@ -5,9 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+      typelist:[
+        '教材教辅',
+        '大学课本',
+        '文学小说',
+        '职业技能',
+        '其他',
 
+      ],
+      currentindex:0
   },
-
+  toClassifyList:function(e){
+    wx.navigateTo({
+      url: '../classify_list/classify_list',
+      success : function(res){
+        res.eventChannel.emit('acceptDataFromOpenerPage',
+         {
+            classify : e.currentTarget.dataset.classify
+         })
+     }
+    })
+  },
+  change(e){
+    this.setData({
+      currentindex:e.currentTarget.dataset.index
+    })
+    console.log(this.data.currentindex,e.currentTarget.dataset.index)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

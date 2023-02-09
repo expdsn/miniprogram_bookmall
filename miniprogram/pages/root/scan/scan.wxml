@@ -1,0 +1,38 @@
+<view class="goods-info">
+  <view class="goods-info-text">
+    输入书籍信息
+  </view>
+  <form catchsubmit="formSubmit">
+    <view class="msg-con">
+      <view class="msg-con-left">书名</view>
+      <input type="text" name="bookName" class="msg-con-right" placeholder="输入书名"/>
+    </view>
+    <view class="msg-con">
+      <view class="msg-con-left">作者</view>
+      <input type="text" name="author" class="msg-con-right" placeholder="输入作者名"/>
+    </view>
+    <view class="msg-con">
+      <view class="msg-con-left">出版社</view>
+      <input type="text" name="press" class="msg-con-right" placeholder="输入出版社"/>
+    </view>
+    <view class="msg-con">
+      <view class="msg-con-left">ISBN</view>
+      <view  class="msg-con-right i-ifo">{{ISBN}}</view>
+
+    </view>
+    <view class="msg-con">
+      <view class="msg-con-left">图书类型</view>
+      <picker class="msg-con-right-input class1"  mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker" id="classify">
+          {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
+      <view class="icon-youbian"></view>
+    </view>
+    <view class="msg-con"> 添加封面 </view>
+    <uploadimg title="上传资料" bind:getUploaderList="getUploaderList"></uploadimg>
+   
+    <button type="primary" form-type="submit" class="btn-submmit" >提交表单</button>
+  </form>
+</view>
+  

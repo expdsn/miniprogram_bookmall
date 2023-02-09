@@ -1,29 +1,21 @@
 // pages/shopping-cart/shopping-cart.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num:'2',
-    netname:'老笔斋的老猫',
-    photo:'../../images/qrxd/book.jpg',
-    goodsName:'沉默的大多数',
-    description:'之前看完一直闲置在书架上,最近清理物品准备把它出售',
-    xin:'9成新',
-    position:'3舍',
-    nowPrice:'￥16',
-    beforePrice:'￥22.5',
-    wantBuy:'42人想要'
-  },
-  select:function() {
-
+    msgList : []
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  //  setInterval(()=>{
+  //   app.getMsgList()
 
+  //  }, 10000)
   },
 
   /**
@@ -32,12 +24,36 @@ Page({
   onReady: function () {
 
   },
+  readed : function(e){
+    let index = e.currentTarget.dataset.index
+    const that = this
+    let list = that.data.msgList
+    list[index].read = true
+    that.setData({
+      msgList : list
+    })
+    wx.cloud.callFunction({
+      name : 'delete_alert',
+      data : {
+        id : list[index]._id
+      }
+    }).then(res=>{
+      app.getMsgList()
 
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
+    const that = this
+    app.getMsgList().then(value=>{
+      that.setData({
+        msgList : value
+      })
+
+    })
   },
 
   /**
@@ -58,6 +74,15 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    const that = this
+    app.getMsgList().then(value=>{
+      that.setData({
+        msgList : value
+      })
+      wx.stopPullDownRefresh({
+        success: (res) => {},
+      })
+    })
 
   },
 

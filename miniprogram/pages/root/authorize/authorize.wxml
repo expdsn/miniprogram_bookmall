@@ -1,0 +1,24 @@
+<view class="container" wx:if="{{hasInfo}}">
+  <view class="show-img">
+    <image src="{{fileUrl}}"></image>
+  </view>
+  <view class="info">
+    <view class="title"><text>申请人：</text></view>
+    <view><text>{{authList[current_index].applicant}}</text></view>
+    <view class="title"><text>学号：</text></view>
+    <view><text>{{authList[current_index].studentId}}</text></view>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="pass" disabled="{{submiting}}">给予授权</button>
+    <button type="warn" bindtap="refuse" disabled="{{submiting}}">残忍拒绝</button>
+  </view>
+</view>
+<view class="container" wx:if="{{loading}}">
+  <view class="alert"><text>正在载入。。。</text></view>
+</view>
+<view class="container" wx:if="{{!loading&&!hasInfo}}">
+  <view class="alert">
+    <text>暂时无人申请</text>
+    <button class="alert-btn" bindtap="refresh">Refresh</button>
+  </view>
+</view>

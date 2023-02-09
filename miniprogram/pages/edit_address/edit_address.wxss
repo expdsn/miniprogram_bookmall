@@ -28,6 +28,14 @@
   width: 60%;
   font-size:32rpx;
 }
+picker {
+  position: relative;
+  width: 60%;
+}
+picker .icon-youbian {
+  position: absolute;
+  right: 0;
+}
 .edit .icon-youbian {
   font-family: 'iconfont';
 }
@@ -59,11 +67,11 @@
 .sure {
   width: 90% !important;
   margin:100rpx auto 0;
-  height: 60rpx;
-  line-height: 1;
+  height: 80rpx;
+  line-height: 40rpx;
   border-radius: 50rpx;
-  background:-webkit-linear-gradient(left,#20ce6e,#238b52);
-  font-size: 32rpx;
+  background-color: #01E266;
+  font-size: 40rpx;
   font-weight: 500;
   color: #fff;
 }

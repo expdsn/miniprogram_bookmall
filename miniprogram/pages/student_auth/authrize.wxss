@@ -1,1 +1,31 @@
-/* pages/student_auth/authrize.wxss */
+/* miniprogram/pages/student_auth/authrize.wxss */
+/* pages/add/add.wxss */
+.tips{
+  font-size: 26rpx;
+  color: #999999;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.weui-input{
+  border-bottom: 1px solid #9f9f9f;
+}
+.info {
+  margin-top: 20rpx;
+  font-size: 46rpx;
+  color: #999999;
+}
+image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.reAuthorize-btn{
+  margin-top: 20rpx;
+  background-color: #666666;
+}

@@ -29,6 +29,9 @@
   border: 2rpx solid rgba(255, 255, 255, 100);
   /* padding-bottom: 100rpx; */
 }
+.inform:last-child{
+  margin-bottom: 69rpx;
+}
 /* 姓名电话 */
 .inform_my {
   display: flex;
@@ -87,4 +90,13 @@
 .icon-dui::before {
   margin-right: 10rpx;
   color: #09BB07;
+}
+.icon-cuo {
+  font-family: 'iconfont';
+}
+.icon-cuo::before {
+  content: '\e62c';
+  color: #505559;
+  font-size: 40rpx;
+  margin: 4rpx 4rpx 0 0;
 }

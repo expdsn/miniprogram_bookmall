@@ -1,2 +1,23 @@
-<!--pages/root/index/index.wxml-->
-<text>pages/root/index/index.wxml</text>
+<view class="m-container">
+  <view bindtap="gopage" data-url="../authorize/authorize">
+   <text>认证中心</text>
+  </view>
+  <view bindtap="scanCode">
+    <text>添加书籍</text>
+  </view>
+  <view bindtap="gopage" data-url="../user_list/user_list">
+    <text>用户管理</text>
+  </view>
+  <view bindtap="generateData">
+    <text>生成数据</text>
+  </view>
+  <view bindtap="gopage" data-url="../book_list/book_list">
+    <text>书库管理</text>
+  </view>
+
+  <view bindtap="goback">
+     <text>回到主页</text>
+  </view>
+  <view class="bg-tr"></view>
+
+</view>

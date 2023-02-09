@@ -1,0 +1,127 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/27 下午5:54:28
+使用方法：
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\buy\buy.wxml 引入模板
+
+```
+<import src="buy.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\buy\buy.wxss 中引入样式
+```
+@import "./buy.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="buy">
+      <view class="status_con">
+        <view class="itemactive" data-index="0">全部</view>
+        <view class="item" data-index="1">待发货</view>
+        <view class="item" data-index="2">待收货</view>
+        <view class="item" data-index="3">待评价</view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-787 sk-text">侧脸</view>
+          <view class="descript"></view>
+        </view>
+        <view class="auth">
+          <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+          <view class="authtext sk-transparent sk-text-20-0000-962 sk-text">学生认证</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-841 sk-text">测试数据</view>
+          <view class="descript sk-transparent sk-text-20-0000-977 sk-text">测试数据7</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-639 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-226 sk-text">￥12</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-85 sk-text">交易完成</view>
+          <view class="status_con">
+            <view class="left sk-transparent sk-text-26-6667-461 sk-text" data-name="123" data-phone="18111002318" style="background-position-x: 50%;">联系卖家</view>
+            <view class="right sk-transparent sk-text-26-6667-614 sk-text" style="background-position-x: 50%;">评价卖家</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-673 sk-text">cx</view>
+          <view class="descript"></view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-336 sk-text">12</view>
+          <view class="descript sk-transparent sk-text-20-0000-725 sk-text">12</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-166 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-165 sk-text">￥22</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-139 sk-text">正在交易</view>
+          <view class="status_con">
+            <view class="left sk-transparent sk-text-26-6667-461 sk-text" data-name="undefined" data-phone="true" style="background-position-x: 50%;">联系卖家</view>
+            <view class="right sk-transparent sk-text-26-6667-749 sk-text" style="background-position-x: 50%;">确认收货</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-665 sk-text">侧脸</view>
+          <view class="descript"></view>
+        </view>
+        <view class="auth">
+          <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+          <view class="authtext sk-transparent sk-text-20-0000-491 sk-text">学生认证</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-139 sk-text">测试数据</view>
+          <view class="descript sk-transparent sk-text-20-0000-429 sk-text">测试数据2</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-946 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-329 sk-text">￥7</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-346 sk-text">交易完成</view>
+          <view class="status_con">
+            <view class="left sk-transparent sk-text-26-6667-626 sk-text" data-name="123" data-phone="18111002318" style="background-position-x: 50%;">联系卖家</view>
+            <view class="right sk-transparent sk-text-26-6667-848 sk-text" style="background-position-x: 50%;">评价卖家</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

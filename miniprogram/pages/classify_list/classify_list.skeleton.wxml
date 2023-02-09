@@ -1,0 +1,105 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/29 下午1:51:02
+使用方法：
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\classify_list\classify_list.wxml 引入模板
+
+```
+<import src="classify_list.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\classify_list\classify_list.wxss 中引入样式
+```
+@import "./classify_list.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view>
+      <view class="father">
+        <view class="seq">
+          <view class="book-goods" data-goods="[object Object]" data-img="https://636c-cloud1-2gsge2khed30fb59-1305570147.tcb.qcloud.la/origin_goods_img/9787559600103_oczQK5itqTj0ydqwCwPdByQ0IKOA_4827.jpg">
+            <view class="img">
+              <image mode="aspectFill" class="sk-image"></image>
+            </view>
+            <view class="good-detail">
+              <view class="detail sk-transparent sk-text-14-2857-770 sk-text">几乎全新</view>
+              <view class="classify sk-pseudo sk-pseudo-circle">
+                <text class="sk-transparent sk-text-14-2857-406 sk-text">经典名著</text>
+              </view>
+              <view class="price sk-transparent">￥20
+                <text class="old_price sk-transparent sk-text-14-2857-194 sk-text" style="text-decoration-color: transparent;">￥50</text>
+              </view>
+              <view class="seller">
+                <image class="seller_header sk-image"></image>
+                <text class="seller_locate sk-transparent sk-text-14-2857-582 sk-text">郫都校区</text>
+                <text class="seller_idntify sk-pseudo sk-pseudo-circle"></text>
+              </view>
+            </view>
+          </view>
+          <view class="book-goods" data-goods="[object Object]" data-img="https://636c-cloud1-2gsge2khed30fb59-1305570147.tcb.qcloud.la/origin_goods_img/9787552600049_oczQK5itqTj0ydqwCwPdByQ0IKOA_3245.jpg">
+            <view class="img">
+              <image mode="aspectFill" class="sk-image"></image>
+            </view>
+            <view class="good-detail">
+              <view class="detail sk-transparent sk-text-14-2857-534 sk-text">9成新 没怎么看</view>
+              <view class="classify sk-pseudo sk-pseudo-circle">
+                <text class="sk-transparent sk-text-14-2857-528 sk-text">经典名著</text>
+              </view>
+              <view class="price sk-transparent">￥15
+                <text class="old_price sk-transparent sk-text-14-2857-328 sk-text" style="text-decoration-color: transparent;">￥29.8</text>
+              </view>
+              <view class="seller">
+                <image class="seller_header sk-image"></image>
+                <text class="seller_locate sk-transparent sk-text-14-2857-919 sk-text">郫都校区</text>
+                <text class="seller_idntify sk-pseudo sk-pseudo-circle"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="seq">
+          <view class="book-goods" data-goods="[object Object]" data-img="https://636c-cloud1-2gsge2khed30fb59-1305570147.tcb.qcloud.la/origin_goods_img/9787539988177_oczQK5itqTj0ydqwCwPdByQ0IKOA_6765.jpg">
+            <view class="img">
+              <image mode="aspectFill" class="sk-image"></image>
+            </view>
+            <view class="good-detail">
+              <view class="detail sk-transparent sk-text-14-2857-285 sk-text">很好的一本书</view>
+              <view class="classify sk-pseudo sk-pseudo-circle">
+                <text class="sk-transparent sk-text-14-2857-110 sk-text">经典名著</text>
+              </view>
+              <view class="price sk-transparent">￥15
+                <text class="old_price sk-transparent sk-text-14-2857-32 sk-text" style="text-decoration-color: transparent;">￥36</text>
+              </view>
+              <view class="seller">
+                <image class="seller_header sk-image"></image>
+                <text class="seller_locate sk-transparent sk-text-14-2857-967 sk-text">郫都校区</text>
+                <text class="seller_idntify sk-pseudo sk-pseudo-circle"></text>
+              </view>
+            </view>
+          </view>
+          <view class="book-goods" data-goods="[object Object]" data-img="https://636c-cloud1-2gsge2khed30fb59-1305570147.tcb.qcloud.la/origin_goods_img/9787544277617_oczQK5itqTj0ydqwCwPdByQ0IKOA_2495.jpg">
+            <view class="img">
+              <image mode="aspectFill" class="sk-image"></image>
+            </view>
+            <view class="good-detail">
+              <view class="detail sk-transparent sk-text-14-2857-662 sk-text">闲置的一本小说，很有深度</view>
+              <view class="classify sk-pseudo sk-pseudo-circle">
+                <text class="sk-transparent sk-text-14-2857-403 sk-text">经典名著</text>
+              </view>
+              <view class="price sk-transparent">￥30
+                <text class="old_price sk-transparent sk-text-14-2857-483 sk-text" style="text-decoration-color: transparent;">￥50</text>
+              </view>
+              <view class="seller">
+                <image class="seller_header sk-image"></image>
+                <text class="seller_locate sk-transparent sk-text-14-2857-535 sk-text">郫都校区</text>
+                <text class="seller_idntify sk-pseudo sk-pseudo-circle"></text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

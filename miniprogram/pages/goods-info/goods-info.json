@@ -1,4 +1,9 @@
-{
-  "usingComponents": {},
-  "navigationStyle":"custom"
+{"usingComponents": {
+  "uploadimg":"../../components/uploadimg/uploadimg"
+},
+"navigationBarBackgroundColor": "#3CB371",
+"navigationBarTextStyle": "white",
+"navigationBarTitleText": "发布书籍",
+"backgroundColor": "#ffffff",
+"backgroundTextStyle": "light"
 }

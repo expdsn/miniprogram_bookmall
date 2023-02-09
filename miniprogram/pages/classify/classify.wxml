@@ -1,23 +1,44 @@
-<!--pages/classify/classify.wxml-->
-<view class="all-classify">全部分类</view>
+
 <view class="box1">
   <view class="box2">
-    <view>教材教辅</view>
-    <view>文学小说</view>
-    <view>经管励志</view>
-    <view>人文社科</view>
-    <view>生活艺术</view>
-    <view>计算机类</view>
-    <view>职业技能</view>
+
+    <view wx:for="{{typelist}}" wx:key="index" bindtap='change' data-index="{{index}}" class="{{currentindex==index?'selected':''}}">{{item}}</view>
   </view>
-  <view class="box3">
-    <view>考研</view>
-    <view>大学教材</view>
-    <view>英语学习</view>
-    <view>资格考试</view>
-    <view>小学教辅</view>
-    <view>初中教辅</view>
-    <view>高中教辅</view>
-    <view>字典词典</view>
+  <view class="box3" wx:if="{{currentindex==0?true:false}}">
+    <view bindtap="toClassifyList" data-classify="{{[0,0]}}">考研用书</view>
+    <view bindtap="toClassifyList" data-classify="{{[0,1]}}">等级考试</view>
+    <view bindtap="toClassifyList" data-classify="{{[0,2]}}">资格考试</view>
+    <view></view>
+
   </view>
+  <view class="box3" wx:if="{{currentindex==1?true:false}}">
+    <view bindtap="toClassifyList" data-classify="{{[1,0]}}">公共必修</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,1]}}">公共选修</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,2]}}">计算机类</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,3]}}">网络通信</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,4]}}">经管专业</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,5]}}">机械专业</view>
+    <view bindtap="toClassifyList" data-classify="{{[1,6]}}">其他</view>
+    <view></view>
+  </view>
+
+  <view class="box3" wx:if="{{currentindex==2?true:false}}">
+    <view bindtap="toClassifyList" data-classify="{{[2,0]}}">经典名著</view>
+    <view bindtap="toClassifyList" data-classify="{{[2,1]}}">科幻小说</view>
+    <view bindtap="toClassifyList" data-classify="{{[2,2]}}">悬疑类</view>
+    <view bindtap="toClassifyList" data-classify="{{[2,3]}}">其他</view>
+  </view>
+  <view class="box3" wx:if="{{currentindex==3?true:false}}">
+    <view bindtap="toClassifyList" data-classify="{{[3,0]}}">前端开发</view>
+    <view bindtap="toClassifyList" data-classify="{{[3,1]}}">网络安全</view>
+    <view bindtap="toClassifyList" data-classify="{{[3,2]}}">后端开发</view>
+    <view bindtap="toClassifyList" data-classify="{{[3,3]}}">程序设计</view>
+    <view bindtap="toClassifyList" data-classify="{{[3,4]}}">其他</view>
+
+  </view>
+  <view class="box3" wx:if="{{currentindex==4?true:false}}">
+    <view bindtap="toClassifyList" data-classify="{{[4,0]}}">其他</view>
+
+  </view>
+
 </view>

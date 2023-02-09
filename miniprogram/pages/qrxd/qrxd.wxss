@@ -265,3 +265,12 @@
   color: #fff;
   font-size: 32rpx;
 }
+.head-img {
+  border-radius: 50%;
+}
+.tips {
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #665555;
+}

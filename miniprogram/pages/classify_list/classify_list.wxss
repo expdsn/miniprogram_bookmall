@@ -1,1 +1,141 @@
-/* pages/classify_list/classify_list.wxss */
+@import '../../iconfont.wxss';
+@import "./classify_list.skeleton.wxss";
+
+.book {
+  display: flex;
+  justify-content: center;
+  padding-top: 16rpx;
+  height: 90rpx;
+  background-color: #fff;
+}
+.book-nav {
+  color: #555555;
+  width: 350rpx;
+  display: flex;
+  height: 50rpx;
+  font-size: 36rpx;
+  justify-content: space-between;
+  top: 0;
+}
+.book-nav .selected {
+  color: #000;
+  font-weight: 500;
+  font-size: 36rpx;
+
+  height: 50rpx;
+}
+.book-nav .selected .tag {
+
+  height: 10rpx;
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.book-nav .selected .tag view{
+  border-radius: 8rpx;
+  width: 40rpx;
+  background-color: #3CB371;
+}
+.father {
+  display: flex;
+  padding-top: 40rpx;
+  justify-content: space-evenly;
+}
+.seq {
+  width: 46%;
+  float: left;
+
+}
+/* temp */
+.book-goods {
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  margin-top: 20rpx;
+}
+
+.book-goods-hiden {
+  opacity: 0;
+
+  transition: opacity 1s linear 1s;
+}
+.loaded{
+  opacity: 1;
+}
+.book-goods   .img image{
+  width: 100%;
+  border-radius: 10px;
+  height: 400rpx;
+}
+
+.good-detail {
+  padding: 18rpx;
+}
+.good-detail .detail {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /*两行,超出为省略号*/
+  -webkit-box-orient: vertical;
+}
+.good-detail .price {
+  color: rgb(202, 57, 57);
+  font-size: 40rpx;
+}
+.seller,
+.classify {
+  font-size: 26rpx;
+  color: rgb(153, 143, 143);
+}
+.classify {
+  margin-top: 10rpx;
+  font-family: 'iconfont';
+  color: #555555;
+}
+.classify::before{
+  font-size: 32rpx;
+  margin-right: 10rpx;
+  content: '\e65a';
+}
+.old_price {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color:rgb(172, 164, 164);
+  text-decoration:line-through;
+}
+.baoyou {
+  float: right;
+  font-size: 20rpx;
+  padding: 6rpx 10rpx;
+  background-color: rgb(26, 102, 26);
+  color: #fff;
+  border-radius: 13rpx;
+}
+.seller_header {
+  width: 40rpx;
+  height: 40rpx;
+  background-color: pink;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.seller_locate {
+  margin-left:16rpx;
+}
+
+.seller_idntify::before {
+  margin-top: 4rpx;
+  float: right;
+  font-family: 'iconfont';
+  color: rgb(9, 126, 9);
+  content: '\e695';
+}
+.load-msg {
+  display: flex;
+  justify-content: center;
+  height: 50rpx;
+  align-items: center;
+}
+.load-msg text{
+  color: #666;
+  font-size: 26rpx;
+}

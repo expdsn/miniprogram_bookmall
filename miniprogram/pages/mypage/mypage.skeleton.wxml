@@ -1,0 +1,65 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/29 下午4:21:11
+使用方法：
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\mypage\mypage.wxml 引入模板
+
+```
+<import src="mypage.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\mypage\mypage.wxss 中引入样式
+```
+@import "./mypage.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view>
+      <view class="my">
+        <view class="my_header">
+          <image class="my_header-img sk-image"></image>
+        </view>
+        <view class="my_name sk-transparent">侧脸23331
+          <view class="nickName">
+            <view class="auth_tag sk-transparent sk-text-14-2857-555 sk-text sk-pseudo sk-pseudo-circle" style="border: none; background-position-x: 50%;">学生认证</view>
+          </view>
+        </view>
+      </view>
+      <ul class="self">
+        <li data-url="../sealing/sealing">
+          <view class="icon-tag1 sk-pseudo sk-pseudo-circle"></view>
+          <view class="sk-transparent sk-text-14-2857-196 sk-text">我在卖的</view>
+        </li>
+        <li data-url="../seal/seal">
+          <view class="icon-qian4 sk-pseudo sk-pseudo-circle"></view>
+          <view class="sk-transparent sk-text-14-2857-42 sk-text">我卖出的</view>
+        </li>
+        <li data-url="../buy/buy">
+          <view class="icon-mairu sk-pseudo sk-pseudo-circle"></view>
+          <view class="sk-transparent sk-text-14-2857-613 sk-text">我买到的</view>
+        </li>
+        <li data-url="../want/want">
+          <view class="icon-shoucang1 sk-pseudo sk-pseudo-circle"></view>
+          <view class="sk-transparent sk-text-14-2857-358 sk-text">我收藏的</view>
+        </li>
+      </ul>
+      <ul class="func">
+        <li class="func_imform" style="border: none;">
+          <text class="sk-transparent sk-text-14-2857-436 sk-text">个人信息</text>
+          <text class="icon-shezhi sk-pseudo sk-pseudo-circle"></text>
+        </li>
+        <li class="func_addresa" style="border: none;">
+          <text class="sk-transparent sk-text-14-2857-588 sk-text">收货地址</text>
+          <text class="icon-location sk-pseudo sk-pseudo-circle"></text>
+        </li>
+        <li class="func_consult" style="border: none;">
+          <text class="sk-transparent sk-text-14-2857-823 sk-text">客服中心</text>
+          <text class="icon-service sk-pseudo sk-pseudo-circle"></text>
+        </li>
+      </ul>
+    </view>
+  </view>
+</template>

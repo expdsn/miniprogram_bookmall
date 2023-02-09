@@ -3,4 +3,4 @@
 <view class="icon-ziyuanldpi"></view>
 <p class="success">发布成功</p>
 <view class="base continue-sales" bindtap="continue">继续卖书</view>
-<view class="base return-menu">返回主页</view>
+<view class="base return-menu" bindtap="check">查看</view>

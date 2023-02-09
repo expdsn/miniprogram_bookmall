@@ -1,0 +1,81 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/16 下午10:27:26
+使用方法：
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\goods-detail\goods-detail.wxml 引入模板
+
+```
+<import src="goods-detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\goods-detail\goods-detail.wxss 中引入样式
+```
+@import "./goods-detail.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="usermsg" style="border: none;">
+      <view class="imgcon">
+        <image class="img sk-image"></image>
+      </view>
+      <view class="msgcon">
+        <view class="name sk-transparent sk-text-15-0000-482 sk-text">boboupgo</view>
+        <view class="descript sk-transparent sk-text-20-0000-517 sk-text">刚刚来过</view>
+      </view>
+      <view class="auth">
+        <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+        <view class="authtext sk-transparent sk-text-20-0000-390 sk-text">学生认证</view>
+      </view>
+    </view>
+    <view class="goodsdetails">
+      <view class="charge_con">
+        <view class="left sk-transparent sk-text-14-2857-95 sk-text">￥16</view>
+        <view class="center sk-transparent sk-text-14-2857-473 sk-text">运费￥5</view>
+        <view class="right sk-transparent sk-text-14-2857-775 sk-text">支持自提</view>
+      </view>
+      <view class="local">
+        <view class="icon-location sk-pseudo sk-pseudo-circle"></view>
+        <view class="localtext sk-transparent sk-text-26-6667-916 sk-text">郫都校区 3舍</view>
+      </view>
+      <view class="swiperstyle">
+        <swiper duration="500" indicator-dots="true" interval="2000" current="0" autoplay="false">
+          <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+            <image class="sk-image"></image>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="bookmsg" style="border: none;">
+        <view class="item">
+          <view class="left sk-transparent sk-text-15-0000-539 sk-text">书名</view>
+          <view class="right sk-transparent sk-text-15-0000-257 sk-text">2021版数据结构高分笔记</view>
+        </view>
+        <view class="item">
+          <view class="left sk-transparent sk-text-15-0000-909 sk-text">作者</view>
+          <view class="right sk-transparent sk-text-15-0000-204 sk-text">率辉, 主编</view>
+        </view>
+        <view class="item">
+          <view class="left sk-transparent sk-text-15-0000-617 sk-text">出版社</view>
+          <view class="right sk-transparent sk-text-15-0000-285 sk-text">机械工业出版社</view>
+        </view>
+        <view class="item">
+          <view class="left sk-transparent sk-text-15-0000-324 sk-text">ISBN</view>
+          <view class="right sk-transparent sk-text-15-0000-955 sk-text">9787111645054</view>
+        </view>
+      </view>
+      <view class="details_title sk-transparent sk-text-14-2857-138 sk-text">商品详情</view>
+      <view class="details_text sk-transparent sk-text-14-2857-691 sk-text">之前看完一直闲置在书架上，最近清理物品准备把 它出掉。 只看过一遍，基本是新的，有需要的朋友尽快联系 我，郫都校区的同学可以自提。
+      </view>
+      <view class="bottom">
+        <view class="left">
+          <view class="icon-shoucang1 sk-pseudo sk-pseudo-circle"></view>
+          <view class="down sk-transparent sk-text-14-2857-238 sk-text">想要</view>
+        </view>
+        <view class="center sk-transparent sk-text-28-2609-612 sk-text" style="border: none; background-position-x: 50%;">加入购物车</view>
+        <view class="right sk-transparent sk-text-28-2609-884 sk-text" style="border: none; background-position-x: 50%;">马上买</view>
+      </view>
+    </view>
+  </view>
+</template>

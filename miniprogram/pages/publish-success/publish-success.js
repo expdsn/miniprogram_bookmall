@@ -8,8 +8,13 @@ Page({
     
   },
 continue:function() {
-      wx.navigateTo({
-        url: '../publish/publish'
+      wx.switchTab({
+        url: '../publish/publish',
+      })
+    },
+    check: function() {
+      wx.switchTab({
+        url: '../find/find',
       })
     },
   /**

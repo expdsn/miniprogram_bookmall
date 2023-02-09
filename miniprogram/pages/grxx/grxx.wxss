@@ -7,6 +7,9 @@
   color: #DE7D2C;
   font-weight: 700;
 }
+.submit-btn{
+  margin-top: 30rpx;
+}
 /* 头像 */
 .heaeder {
   margin: auto;
@@ -45,6 +48,7 @@
 }
 .person li:nth-child(2) input {
   width: 100%;
+  
 }
 .person li view,
 .person li text {
@@ -57,7 +61,7 @@
 /* 完成按钮 */
 button {
   position: absolute;
-  bottom: 200rpx;
+  bottom: 190rpx;
   left: 50%;
   transform: translateX(-50%);
   width: 100rpx;

@@ -4,7 +4,7 @@
 <view class="icon-tianjia" bindtap="add"></view>
 <!-- 收货地址表 -->
 <!-- <block wx:if="{{exist==true}}"> -->
-<block wx:for='{{locallist}}' wx:key='index'>
+<block wx:for='{{userInfo.address}}' wx:key='index'>
 <view class="inform">
   <!-- 姓名电话 -->
     <view class="inform_my">
@@ -13,14 +13,15 @@
     </view>
     <!-- 收货地址 -->
     <view class="inform_address">
-      <view class="address_big">{{item.big_address}}</view>
-      <view class="address_little">{{item.little_address}}</view>
+      <view class="address_big">{{item.bigAddress}}</view>
+      <view class="address_little">{{item.detailAddress}}</view>
     </view>
     <!-- 编辑 删除 -->
     <view class="inform_default">
-      <view class="icon-dui">默认地址</view>
-      <view class="default_edit" bindtap="edit">编辑</view>
-      <view class="default_delete" bindtap="delete">删除</view>
+      <view  class="{{item.isDefault?'icon-dui':'icon-cuo'}}">默认地址</view>
+      <view></view>
+      <view class="default_edit" bindtap="edit" data-index="{{index}}">编辑</view>
+      <view class="default_delete" bindtap="delete" data-index="{{index}}">删除</view>
     </view>
   <!-- </block> -->
 </view>

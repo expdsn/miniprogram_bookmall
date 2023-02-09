@@ -1,0 +1,37 @@
+/* miniprogram/pages/root/authorize/authorize.wxss */
+
+.container{
+  height: 1000rpx;
+  position: relative;
+}
+.info {
+  margin-top: 60rpx;
+}
+.alert {
+  position: absolute;
+  top: 500rpx;
+  font-size: 30px;
+  color: #666666;
+} 
+.alert-btn{
+  margin-top: 20rpx;
+  color: #666666;
+  background-color: #dddddd;
+}
+
+.show-img {
+  height: 400rpx;
+  margin-top: 50rpx;
+}
+.title {
+  font-size: 20px;
+  color: #666666;
+  margin-top: 30rpx;
+}
+.btn-area{
+  position: absolute;
+  bottom: 0;
+}
+.btn-area button{
+  margin-top: 20rpx;
+}

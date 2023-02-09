@@ -1,2 +1,28 @@
-<!--pages/choose_address/choose_address.wxml-->
-<text>pages/choose_address/choose_address.wxml</text>
+<!--pages/shdz/shdz.wxml-->
+<view class="recieve">选择收货地址 </view>
+<!-- 添加地址按钮 -->
+<view class="icon-tianjia" bindtap="add"></view>
+<!-- 收货地址表 -->
+<!-- <block wx:if="{{exist==true}}"> -->
+<block wx:for='{{userInfo.address}}' wx:key='index'>
+<view class="inform" >
+  <!-- 姓名电话 -->
+    <view class="inform_my">
+      <text class="my_name">{{item.uname}}</text>
+      <text class="my_phone">{{item.phone}}</text>
+    </view>
+    <!-- 收货地址 -->
+    <view class="inform_address"  bindtap="choose" data-selected="{{index}}"> 
+      <view class="address_big">{{item.bigAddress}}</view>
+      <view class="address_little">{{item.detailAddress}}</view>
+    </view>
+    <!-- 编辑 删除 -->
+    <view class="inform_default">
+      <view  class="{{item.isDefault?'icon-dui':'icno-cuo'}}">默认地址</view>
+      <view></view>
+      <view class="default_edit" bindtap="edit" data-index="{{index}}">编辑</view>
+
+    </view>
+  <!-- </block> -->
+</view>
+</block>

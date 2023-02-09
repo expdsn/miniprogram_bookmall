@@ -1,44 +1,17 @@
-<!--pages/shopping-cart/shopping-cart.wxml-->
-<!-- 购物车页 -->
-<view class="sub">
-  <view class="shopping-cart">购物车</view>
-  <view class="num">共{{num}}件</view>
-</view>
-<view class="cart1">
-  <!-- 卖家信息 -->
-  <view class="order_self">
+<view class="msg">
+  <view class="item" wx:for="{{msgList}}" wx:key="index" bindtap="readed" data-index="{{index}}">
     <view class="head">
-      <image src="../../images/qrxd/head.jpg"></image>
+      <image wx:if="{{item.type==1}}" src="../../images/msg.png"></image>
+      <image wx:if="{{item.type==0}}" src="{{item.avatarUrl}}"></image>
+
     </view>
-    <view class="uname">{{netname}}</view>
-    <view class="just">刚刚来过</view>
-    <view class="icon-approve">学生认证</view>
-  </view>
-  <!-- 买家信息end -->
-  <!-- 书籍信息 -->
-  <view class="content">
-    <view class="icon-dui" bindtap="select"></view>
-    <view class="photo">
-      <image src="{{photo}}"></image>
+    <view class="info">
+      <view class="name" wx:if="{{item.type==1}}">系统消息</view>
+      <view class="name" wx:if="{{item.type==0}}">{{item.nickName}}</view>
+
+      <view class="alert">{{item.msg}}</view>
     </view>
-    <view class="right-content">
-    <view class="goods-name">{{goodsName}}</view>
-    <view class="goods-description">{{description}}</view>
-    <view class="icon-tag2">{{xin}}</view>
-    <view class="icon-location">{{position}}</view>
-    <view class="price">
-      <text class="now-price">{{nowPrice}}</text>
-      <text class="before-price">{{beforePrice}}</text>
-      <text class="want-buy">{{wantBuy}}</text>
-    </view>
-  </view>
+    <view class="time">{{item.timeString}}</view>
+    <view class="read-red" wx:if="{{!item.read}}"></view>
   </view>
 </view>
-<!-- 书籍信息end -->
-<view class="bottom">
-  <text class="all-select">全选</text>
-  <text class="heji">合计： <text>￥16</text></text>
-  <view class="jiesuan">结算</view>
-</view>
-
-

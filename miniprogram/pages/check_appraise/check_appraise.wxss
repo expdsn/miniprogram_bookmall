@@ -1,1 +1,51 @@
-/* pages/check_appraise/check_appraise.wxss */
+/* miniprogram/pages/check_appraise/check_appraise.wxss */
+.check{
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.title {
+  color: #3CB371;
+  font-size: 38rpx;
+  margin-left: 20rpx;
+}
+.box {
+  padding: 20rpx;
+  font-size: 34rpx;
+  color: #333333;
+  width: 650rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+  box-shadow: 1px 2px 3px #666;
+  position: relative;
+}
+.time {
+  color: #666;
+  position: absolute;
+  bottom: 18rpx;
+  right: 20rpx;
+  font-size: 30rpx;
+}
+.star {
+  color: #000;
+  background-color: #dddddd;
+  position: absolute;
+  bottom: 18rpx;
+  left: 20rpx;
+  font-size: 26rpx;
+  width: 80rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.bad {
+  background-color: #dddddd;
+
+}
+.good {
+  background-color: #3CB371 !important;
+  color: #fff !important;
+
+}

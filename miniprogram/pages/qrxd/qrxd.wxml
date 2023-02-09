@@ -5,53 +5,68 @@
 <view class="locate" bindtap="locate">
   <view class="icon-location"></view>
   <view class="icon-youbian"></view>
-  <text>{{uname}} {{phone}}</text>
-  <text>致远居3号楼</text>
+  <text wx:if="{{addressIndex == -1}}">请选择地址</text>
+  <text wx:if="{{addressIndex!=-1}}">{{userInfo.address[addressIndex].uname}} {{userInfo.address[addressIndex].phone}}</text>
+  <text wx:if="{{addressIndex != -1}}">{{userInfo.address[addressIndex].bigAddress+userInfo.address[addressIndex].detailAddress}}</text>
 </view>
 
 <!-- 订单信息 -->
 <view class="order">
   <view class="order_self">
     <view class="head">
-      <image src="../../images/qrxd/head.jpg"></image>
+      <image class="head-img" src="{{goodsItem.userInfo.avatarUrl}}"></image>
     </view>
-    <view class="uname">{{netname}}</view>
-    <view class="just">刚刚来过</view>
-    <view class="icon-approve">学生认证</view>
+    <view class="uname">{{goodsItem.userInfo.nickName}}</view>
+    <view class="just">{{timeString}}</view>
+    <view class="icon-approve" wx:if="{{goodsItem.userInfo.authorizeStatus==3}}">学生认证</view>
   </view>
   <view class="order_news">
     <view class="goods">
-      <image src="../../images/qrxd/book.jpg"></image>
+      <image src="{{imgUrl}}"></image>
     </view>
-    <view class="goods_name">{{bookname}}</view>
-    <view class="icon-tag2">   {{booktype}}</view>
+    <view class="goods_name">{{goodsItem.bookInfo.bookName}}</view>
+    <view class="icon-tag2">{{classifyString}}</view>
     <view class="icon-location">
-      <text>{{address}}</text>
-      <text class="support">支持自提</text>
+      <text>{{goodsItem.position}}</text>
+      <text class="support" wx:if="{{goodsItem.canNoPost}}">支持自提</text>
+      <text class="support" wx:if="{{!goodsItem.canNoPost}}">不能自提</text>
+
     </view>
     <view class="price">
-      <text class="icon-YUAN-circle-fill">{{price}}</text>
-      <text class="num">×{{number}}</text>
+      <text class="icon-YUAN-circle-fill">￥{{goodsItem.goodPrice}}</text>
     </view>
-    <view class="distribution"  bindtap="another">
+    <view class="distribution" wx:if="{{(!goodsItem.canNoPost)&&(!goodsItem.isPostFree)}}">
       <text class="way">配送方式</text>
-      <text class="distribution_money">配送  ￥{{dis_money}}</text>
-      <text class="icon-youbian"></text>
+      <text class="distribution_money">配送  ￥{{goodsItem.postPrice}}</text>
+
     </view>
+    <view class="distribution" wx:if="{{goodsItem.isPostFree}}">
+      <text class="way">配送方式</text>
+      <text class="distribution_money">免运费</text>
+
+    </view>
+    <picker class="distribution" range="{{pickRange}}" bindchange="pickerChange"  wx:if="{{goodsItem.canNoPost&&(!goodsItem.isPostFree)}}">
+      <text class="way">配送方式</text>
+      <text class="distribution_money" wx:if="{{picked==0}}">配送  ￥{{goodsItem.postPrice}}</text>
+      <text class="distribution_money" wx:if="{{picked==1}}">自提</text>
+      <text class="icon-youbian"></text>
+    </picker>
+    
     <view class="underline"></view>
-    <view class="all_money">共{{number}}件商品 , 小计￥{{price+dis_money}}元</view>
+    <view class="all_money">共{{number}}件商品 , 小计￥{{totalPrice}}元</view>
   </view>
 </view>
 <!-- 支付 -->
 <view class="afford">
+  <view class="tips">提示：由于微信政策限制，暂时不支持线上支付，请当面支付</view>
   <view class="afford_way">
-    <text>支付方式</text> <text>微信支付</text>
+    <text>交易方式</text> <text>线下交易</text>
   </view>
   <view class="underline"></view>
   <view class="place_order">
     <view class="total">
-      合计： <text>￥{{price+dis_money}}</text>
-      <button bindtap="maskaccur">确认下单</button>
+      合计： <text>￥{{totalPrice}}</text>
+      <button bindtap="maskaccur">确认交易</button>
     </view>
     
   </view>
@@ -59,12 +74,13 @@
 <!-- 确认下单弹窗 -->
 <view class="mask" wx:if="{{showMask}}" bindtap="maskhidden"></view>
 <view class="confirm" wx:if="{{showMask}}">
-    <view class="confirm_payment">确认付款</view>
-    <view class="confirm_money">￥{{price+dis_money}}</view>
+    <view class="confirm_payment">确认下单</view>
+    <view class="confirm_money">￥{{totalPrice}}</view>
     <view class="confirm_way">
-      <text>支付方式</text> <text>微信支付</text>
+      <text>支付方式</text> <text>线下支付</text>
     </view>
     <view class="underline"></view>
-    <button class="confirm_afford">立即付款</button>
+    <button class="confirm_afford" bindtap="makeOrder" 
+    disabled="{{submitting}}">再次确认</button>
   </view>
 

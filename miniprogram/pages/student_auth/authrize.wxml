@@ -1,2 +1,54 @@
-<!--pages/student_auth/authrize.wxml-->
-<text>pages/student_auth/authrize.wxml</text>
+<!--pages/add/add.wxml-->
+<view class="container" wx:if="{{authorizeStatus==0}}">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="page-section">
+      <view class="page-section-title">姓名</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd" style="margin: 30rpx 0" >
+            <input class="weui-input" name="userName" placeholder="输入姓名" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">学号</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd" style="margin: 30rpx 0" >
+            <input class="weui-input" name="userId" placeholder="输入学号" />
+          </view>
+        </view>
+      </view>
+    </view>
+   
+    <view class="tips">提示：只需要上传正面即可</view>
+  
+    <button type="warn" bindtap="doUpload" >{{isUpload?'重新上传':'上传学生证'}}</button>
+    <view class="btn-area">
+      <button style="margin: 30rpx 0" type="primary" formType="submit" disabled="{{submiting}}">提交</button>
+
+    </view>
+  </form>
+</view>
+<view class="container" wx:if="{{authorizeStatus==1}}">
+  <image src="../../images/auth.png"></image>
+  <view class="info">审核中</view>
+  <view class="info">请等待1到2个工作日</view>
+
+</view>
+<view class="container" wx:if="{{authorizeStatus==2}}">
+  <image src="../../images/auth_fail.png"></image>
+  <view class="info">认证失败</view>
+  <view class="info">原因：提交的资料与本人不符合</view>
+  <button bindtap="reAuthorize" type="warn" 
+  class="reAuthorize-btn">重新认证</button>
+
+</view>
+<view class="container" wx:if="{{authorizeStatus==3}}">
+  <image src="../../images/auth_pass.png"></image>
+  <view class="info">审核通过</view>
+  <view class="info">你已拥有学生认证</view>
+
+
+</view>

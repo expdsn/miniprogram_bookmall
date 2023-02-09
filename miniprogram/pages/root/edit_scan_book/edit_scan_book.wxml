@@ -1,2 +1,46 @@
-<!--pages/root/edit_scan_book/edit_scan_book.wxml-->
-<text>pages/root/edit_scan_book/edit_scan_book.wxml</text>
+<view class="goods-info">
+  <form bindsubmit="formSubmit">
+  <view class="goods-info-text">
+    添加照片
+  </view>
+  <uploadimg title="上传资料" bind:getUploaderList="getUploaderList" uploaderList="{{fileUrlList}}" uploaderNum="{{fileUrlList.length}}"></uploadimg>
+
+  <view class="goods-info-text">
+    基本信息
+  </view>
+  <view class="msg-con">
+    <view class="msg-con-left">书名</view>
+    <input type="text" name="bookName" class="msg-con-right" placeholder="输入书名" value="{{bookName}}"/>
+  </view>
+  <view class="msg-con">
+    <view class="msg-con-left">作者</view>
+    <input type="text" name="author" class="msg-con-right" placeholder="输入作者名" value="{{author}}"/>
+  </view>
+  <view class="msg-con">
+    <view class="msg-con-left">出版社</view>
+    <input type="text" name="press" class="msg-con-right" placeholder="输入出版社"
+    value="{{press}}"/>
+  </view>
+  <view class="msg-con">
+    <view class="msg-con-left">ISBN</view>
+    <input type="text" name="ISBN" class="msg-con-right" placeholder="输入ISBN"
+    value="{{ISBN}}"/>
+
+  </view>
+  <view class="msg-con">
+      <view class="msg-con-left">图书类型</view>
+      <picker class="msg-con-right-input" id="classify" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker" id="classify">
+          <text class="middle" wx:if="{{!isClassify}}">未分类</text>
+          <text class="middle1" wx:else>{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}</text>
+      <text class="icon-youbian"></text>
+          
+        </view>
+      </picker>
+    </view>
+
+
+  <button class="sub" type="primary" form-type="submit">保存</button>
+  </form>
+</view>
+  

@@ -1,49 +1,115 @@
-<!--pages/goods-info/goods-info.wxml-->
-<!-- 编辑商品信息页面 -->
-<view class="info1">
-<text class="icon-zuobian" style="color:black; font-size:60rpx;"></text>
-<view class="information">商品信息</view>
-</view>
-<!-- 基本信息 -->
-<view class="base">基本信息
-  <view class="book-name">书名
-    <p class="book-name1">{{bookName}}</p>
+<form catchsubmit="formSubmit">
+<view class="goods-info {{keyShow?'bg-black':''}}" >
+
+  <view class="descript">
+    <textarea name="desc" class="contents" placeholder="说说书的版本，转手原因，书的成色..."></textarea>
   </view>
-  <view class="book-name">作者
-    <p class="book-name1">{{author}}</p>
+
+  <uploadimg title="上传资料" bind:getUploaderList="getUploaderList" uploaderList="{{fileUrlList}}" class="uploader" uploaderNum="{{fileUrlList.length}}"></uploadimg>
+
+
+  <view class="msg-con">
+    <view class="msg-con-left">书名</view>
+    <input type="text" class="msg-con-right" name="bookName" placeholder="输入书名" value="{{bookName}}"/>
   </view>
-  <view class="book-name">出版社
-    <p class="book-name1">{{publisher}}</p>
+  <view class="msg-con">
+    <view class="msg-con-left">作者</view>
+    <input type="text" class="msg-con-right" name="author" placeholder="输入作者名" value="{{author}}"/>
   </view>
-  <view class="book-name">ISBN
-    <p class="book-name1">{{ISBN}}</p>
+  <view class="msg-con">
+    <view class="msg-con-left">出版社</view>
+    <input type="text" class="msg-con-right" name="press" placeholder="输入出版社"
+    value="{{press}}"/>
   </view>
-  <view class="book-name">品相
-    <text class="select">必选</text>
+  <view class="msg-con">
+    <view class="msg-con-left">ISBN</view>
+    <input type="text" class="msg-con-right" name="ISBN" placeholder="输入ISBN"
+    value="{{ISBN}}"/>
+
+  </view>
+
+  <view class="msg-con">
+      <view class="msg-con-left">图书类型</view>
+      <picker class="msg-con-right-input" id="classify" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class="picker" id="classify">
+          <text class="middle" wx:if="{{!isClassify}}">请选择</text>
+          <text class="middle1" wx:else>{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}</text>
+      <text class="icon-youbian"></text>
+          
+        </view>
+      </picker>
+    </view>
+  
+
+    <view class="msg-con">
+    <view class="msg-con-left">商品位置</view>
+    <picker class="msg-con-right-input"  range="{{schools}}" id="classify2" bindchange="schoolChange" >
+      <view class="picker">
+        <text class="school" class="middle">{{school}}</text>
+        </view>
+    </picker>
     <text class="icon-youbian"></text>
   </view>
-  <view class="book-name">图书类型
-    <text class="select">必选</text>
-    <text class="icon-youbian"></text>
+
+    <view class="msg-con">
+      <view class="msg-con-left">价格</view>
+
+      <view class="picker" id="classify" catchtap='showKeyboard'>
+        <text class="middle" style="color: #666;" wx:if="{{!price}}">￥0.00</text>
+        <text class="middle" style="color: red;" wx:if="{{price}}">￥{{price}}</text>
+        
+      
+      <text class="icon-youbian"></text>
+    </view>
+      
+      
   </view>
-  <view class="book-name">商品位置
-    <text class="select">必选</text>
-    <text class="icon-youbian"></text>
-  </view>
+  <button class="charge" type="primary" disabled="{{submitting}}" form-type="submit">发布</button>
 </view>
-<!-- 添加照片 -->
-<view class="add-photo">添加照片
-  <view class="photo">
-      <span class="cover">封面</span>
-      <image src="../../images/goods-info/book.jpg"></image>
-  </view>
-  <view class="plus-sign">
-    <span class="icon-tianjia1"></span>
-  </view>
-</view>
-<!-- 商品描述 -->
-<view class="items-descript">商品描述 
-  <textarea name="" id="" wrap="hard" cols="18" rows="5" maxlength="100" class="input-descript"></textarea>
-</view>
-<view class="get-price">出价</view>
+</form>
+<view class="model"  wx:if='{{keyShow}}' catchtap="hindKeyboard"></view>
+<view class='keyboard {{keyShow&&"hind_box"}}'>
+  <view class='input_view'>
+        <view class='input_box'  catchtap='keyInput' data-keys="1">
+            <text class='input_label'>￥</text>
+            <text class='content' wx:if="{{content1}}">{{content1}}</text>
+            <view class='className' wx:if="{{keyInputing==1}}"></view>
+            <text class='content place' wx:if="{{!content1}}">请输入金额</text>
+        </view>
+        <view class='input_box' catchtap='keyInput' data-keys="2">
+            <text class='input_label_o'>原价</text>
+            <text class='content_o'   wx:if="{{content2}}">￥{{content2}}</text>
+            <view class='className' wx:if="{{keyInputing==2}}"></view>
+            <text class='content place' catchtap='keyInput' data-keys="2" wx:if="{{!content2}}">￥0.00</text>
+          </view>
+          <view class='input_box' >
+            <text class='input_label_o'>运费</text>
+            <block wx:if="{{!isPostFree}}">
+              <text class='content_o'  catchtap='keyInput' data-keys="3"  wx:if="{{content3}}">￥{{content3}}</text>
+              <view class='className' wx:if="{{keyInputing==3}}"></view>
+              <text  class='content place' catchtap='keyInput' data-keys="3" wx:if="{{!content3}}">￥0.00</text>
+
+            </block>
+            <text class="content place" wx:if="{{isPostFree}}">免运费</text>
+            <checkbox class="check" bindtap="isPostFree">包邮</checkbox>
+        </view>
+        <checkbox checked="true" class="check1" bindtap="canNoPost">支持自提</checkbox>
+
+
+    </view>
+       <view class='key_box'>
+            <view class="number_box">
+                <view class='keys {{index==9?"zero":""}}' wx:for='{{KeyboardKeys}}' wx:key='this' catchtap='keyTap' data-keys='{{item}}'>{{item}}</view>
+            </view>
+            <view class="btn_box">
+                <view class='keys' catchtap='keyTap' data-keys='<'>
+               		<!-- 根据项目实际路径引用 -->
+                    <view mode="widthFix" class="back"></view>
+                </view>
+                <view class="keys pay_btn" catchtap='payTap'>确定</view>
+            </view>
+        </view>
+
+      </view>
+
   

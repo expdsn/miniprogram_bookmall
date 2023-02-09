@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "控制面版",
+  "navigationBarBackgroundColor": "#f00"
+
+
 }

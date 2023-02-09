@@ -20,26 +20,43 @@ page {
     float: left;
     /* left: 22rpx;
   top: 155rpx; */
-  margin-top: 180rpx;
-  width: 250rpx;
-  height: 112rpx;
+  margin-top: 140rpx;
+  width: 230rpx;
+  height: 60rpx;
   color: rgba(38, 198, 109, 88);
   font-size: 40rpx;
   text-align: left;
-  color: #41CD7F;
+  color: #666666;
   font-family: PingFangSC-bold;
-  margin-left: 40rpx;
+  margin-left: 110rpx;
   }
   .write1 {
   float: left;
-  width: 420rpx;
-  height:403.2rpx;
+  width: 300rpx;
   margin-left: 20rpx;
+  margin-top: 80rpx;
+  }
+  .p1 {
+    width: 276rpx;
+    height: 200rpx;
+    margin-left: 16rpx;
+  }
+  .p2{
+    width: 230rpx;
+  margin-left: 40rpx;
+
+    height: 190rpx;
+  }
+  .p3{
+  margin-left: 40rpx;
+
+    width: 230rpx;
+    height: 200rpx;
   }
   .scan {
   position: absolute;
   left: 40rpx;
-  top: 1420rpx;
+  top: 1000rpx;
   width: 300rpx;
   height: 110rpx;
   line-height: 110rpx;
@@ -56,7 +73,7 @@ page {
   .input{
   position: absolute;
   right: 40rpx;
-  top: 1420rpx;
+  top: 1000rpx;
   width: 300rpx;
   height: 110rpx;
   line-height: 110rpx;

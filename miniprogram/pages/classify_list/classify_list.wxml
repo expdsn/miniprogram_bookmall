@@ -1,2 +1,40 @@
-<!--pages/classify_list/classify_list.wxml-->
-<text>pages/classify_list/classify_list.wxml</text>
+<import src="classify_list.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+
+<view wx-if="{{!loading}}">
+
+  <view class="father">
+      <view class="seq">
+    <view class="book-goods"  wx:for="{{freeGoodsList}}" wx:key="index" wx:if="{{index%2==0}}" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img" ><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if='{{item.userInfo.authorizeStatus==3}}'></text>
+        </view>
+      </view>
+    </view>
+       </view>
+  <view class="seq" >
+    <view class="book-goods" wx:for="{{freeGoodsList}}" wx:if="{{index%2==1}}" wx:key="index" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img"><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if="{{item.userInfo.authorizeStatus==3}}"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+    </view>
+</view>

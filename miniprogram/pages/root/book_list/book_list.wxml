@@ -1,2 +1,23 @@
-<!--pages/root/book_list/book_list.wxml-->
-<text>pages/root/book_list/book_list.wxml</text>
+<view class="list">
+  <view class="head-info">
+    <text>目前书库有{{num}}本书</text>
+  </view>
+  <view class="title">
+    <view class="t1">序号</view>
+    <view class="t2">书名</view>
+
+    <view class="t3">操作</view>
+
+
+  </view>
+  <view class="item" wx:for="{{bookInfoList}}" wx:key="key">
+    <view class="id">{{index+1}}</view>
+    <view class="book-name {{item.classify[0]==-1?'red':''}}" bindtap="check" data-url="{{item.fileIDList}}">{{item.bookName}}</view>
+   
+    <view class="operation">
+      <button type="primary" size="mini" data-index="{{index}}" bindtap="edit">编辑</button>
+      <button type="warn" size="mini" data-index="{{index}}" bindtap="delete">删除</button>
+    </view>
+  </view>
+
+</view>

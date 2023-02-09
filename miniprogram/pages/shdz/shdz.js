@@ -1,61 +1,83 @@
 // pages/shdz/shdz.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    locallist:[
-      {
-        // exist: true,
-        uname:'张三',
-        phone:'177-6666-9999',
-        big_address:'郫都校区',
-        little_address:'致远居3号楼3226'
-      },
-      {
-        // exist: true,
-        uname:'李四',
-        phone:'177-4444-9999',
-        big_address:'郫都校区',
-        little_address:'致远居1号楼3226'
-      }
-    ]
+    userInfo:{}
   },
   // 编辑按钮
   edit:function(e) {
+    let _address = this.data.userInfo.address[e.target.dataset.index]
     wx.navigateTo({
-      url: '../edit_address/edit_address'
+      url: '../edit_address/edit_address?start_index=' + e.target.dataset.index,
+      success : function(res){
+         res.eventChannel.emit('acceptDataFromOpenerPage', _address)
+      }
     })
   },
   // 添加按钮
   add:function() {
+    if (this.data.userInfo.address.length >= 5) {
+       wx.showToast({
+        title: '地址数已达上限',
+        duration: 1000,
+        icon: 'error'
+      })
+      return
+    }
     wx.navigateTo({
       url: '../add_address/add_address',
     })
   },
   // 删除按钮
-  delete:function(){
+  delete:function(e){
+    const that = this
     wx.showModal({
-    title: '提示',
-    content: '确定删除该项吗',
-    success: function (sm) {
-    if (sm.confirm) {
-    wx.showToast({
-    title: '操作成功', // 标题
-    icon: 'success', // 图标类型，默认success
-    duration: 1500, // 提示窗停留时间，默认1500m
+      title: '提示',
+      content: '确定删除该项吗',
+      success: function (sm) {
+        if (sm.confirm) {
+        
+        let _index = e.target.dataset.index
+        let _address_list = that.data.userInfo.address
+        console.log(_address_list)
+        // console.log(_index)
+        let new_address_list = _address_list.filter(function(i, index){  
+          return index != _index
+        })
+        if (_address_list[_index].isDefault && new_address_list.length > 0) {
+          new_address_list[0].isDefault = true
+        }
+        console.log(new_address_list)
+        that.setData({
+          ['userInfo.address'] : new_address_list
+        })
+        app.globalData.userInfo.address = new_address_list
+        wx.cloud.callFunction({
+          name: 'update_user_info',
+          data: {
+            openid: app.globalData.userInfo._openid,
+            userInfo: app.globalData.userInfo
+          }
+        }).then(success=>{
+          
+        })
+        // _address_list.splice(_index, 1)
+        // console.log(_address_list)
+        }
+      }
     })
-    }
-    }
-    })
-    },
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
+  
   },
 
   /**
@@ -69,7 +91,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      userInfo : app.globalData.userInfo
+    })
   },
 
   /**

@@ -1,11 +1,87 @@
-<view class="buy">
+<import src="buy.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="buy" wx-if="{{!loading}}">
   <view class="status_con">
     <block wx:for='{{status_list}}' wx:key='index'>
       <view class="{{currentindex==index?'itemactive':'item'}}" bindtap="change" data-index="{{index}}">{{item}}</view>
     </block>
   </view> 
-  <usermsg></usermsg>
-  <block wx:for='{{tradelist}}' wx:key='index'>
-    <trade_item item="{{item}}"></trade_item>
+<block wx:for='{{tradelist}}' wx:key='index'>
+  <view class="usermsg">
+  <view class="imgcon">
+    <image src="{{item.goodsItem.userInfo.avatarUrl}}" mode="aspectFill" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">{{item.goodsItem.userInfo.nickName}}</view>
+    <view class="descript">{{loginString}}</view>
+  </view>
+  <view class="auth" wx:if="{{item.goodsItem.userInfo.authorizeStatus == 2}}">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+
+
+</view>
+      <view class="trade_item">
+    <view class="img_con">
+      <image mode="aspectFill" src="{{tradeUrlList[index]}}" class="img"></image>
+    </view>
+    <view class="msg_con">
+      <view class="bookname">{{item.goodsItem.bookInfo.bookName}}</view>
+      <view class="new">
+        <view class="icon-tag"></view>
+        <view class="new_text">{{classifyStringList[index]}}</view>
+      </view>
+      <view class="charge">
+        <view class="charge_text">￥{{item.money}}</view>
+      </view>
+      <view class="condition" wx:if="{{item.status==0&&item.postMethod==0}}">待发货中</view>
+      <view class="condition" wx:if="{{item.status==0&&item.postMethod==1}}">待自提中</view>
+
+      <view class="condition" wx:if="{{item.status==1}}">等待收货</view>
+      <view class="condition" wx:if="{{item.status==2}}">等待评价</view>
+      <view class="condition" wx:if="{{item.status==3}}">交易成功</view>
+
+      <view class="condition" wx:if="{{item.status==-1}}">交易失败</view>
+      <view class="status_con" wx-if="{{item.status==0}}">
+        <view class="left" bindtap="showPhone" data-phone="{{item.goodsItem.userInfo.phone}}" data-name="{{item.address.uname}}">联系卖家</view>
+        <view class="right" bindtap="alert" data-openid="{{item.goodsItem.userInfo._openid}}">提醒发货</view>
+      </view>
+      <view class="status_con" wx-if="{{item.status==1}}">
+        <view class="left" bindtap="showPhone" data-phone="{{item.address.phone}}" data-name="{{item.address.uname}}">联系卖家</view>
+        <view class="right" bindtap="comfirmGood" data-id="{{item._id}}">确认收货</view>
+      </view>
+      <view class="status_con" wx-if="{{item.status==-1}}">
+        <view class="left" bindtap="showPhone" data-phone="{{item.address.phone}}" data-name="{{item.address.uname}}">联系卖家</view>
+      </view>
+      <view class="status_con" wx-if="{{item.status==2}}">
+        <view class="left" bindtap="showPhone" data-phone="{{item.address.phone}}" data-name="{{item.address.uname}}">联系卖家</view>
+        <view class="right" bindtap="appraise" data-id="{{item._id}}">评价卖家</view>
+
+      </view>
+      <view class="status_con" wx-if="{{item.status==3}}">
+        <view class="left" bindtap="showPhone" data-phone="{{item.address.phone}}" data-name="{{item.address.uname}}">联系卖家</view>
+        <view class="right" bindtap="check_appraise" data-id="{{item._id}}">查看评价</view>
+
+      </view>
+   
+  
+    </view>
+    
+  </view>
+
   </block>
+</view>
+<view class='mask' hidden='{{maskFlag}}'>
+
+</view>
+<view class="msg" hidden='{{maskFlag}}'  bindtap="hiddenMask">
+  <view class="show-tele">
+    <view class="phone">
+      <text>联系电话：</text>
+      <input class='phone-ipt' type="text" value="{{phone}}"/>
+      <text class="copy" bindtap="copy">一键复制</text>
+    </view>
+
+  </view>
 </view>

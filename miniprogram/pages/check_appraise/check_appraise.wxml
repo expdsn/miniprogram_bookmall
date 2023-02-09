@@ -1,2 +1,7 @@
-<!--pages/check_appraise/check_appraise.wxml-->
-<text>pages/check_appraise/check_appraise.wxml</text>
+<view class="check">
+<view class="box">
+  <view class="my_desc">{{myDesc}}</view>
+  <view class="time">{{time}}</view>
+  <view class="star {{star==0?'good':'bad'}}">{{star==0?'好评':'差评'}}</view>
+</view>
+</view>

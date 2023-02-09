@@ -1,1 +1,28 @@
-/* pages/root/index/index.wxss */
+/* miniprogram/pages/root/index/index.wxss */
+
+.m-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+}
+.m-container > view {
+  width: 300rpx;
+  height: 180rpx;
+  margin-top: 100rpx;
+  background-color: #dddddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+}
+.m-container > view > text {
+  font-size: 18px;
+  color: #666;
+  font-weight: bold;
+}
+.bg-tr {
+  background-color : transparent !important;
+}

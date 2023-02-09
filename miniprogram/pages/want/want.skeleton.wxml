@@ -1,0 +1,128 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/29 下午5:35:54
+使用方法：
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\want\want.wxml 引入模板
+
+```
+<import src="want.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\123\cdtu_book_mall\cdtu_book_mall\miniprogram\pages\want\want.wxss 中引入样式
+```
+@import "./want.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="want">
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-271 sk-text">侧脸23331</view>
+          <view class="descript sk-transparent sk-text-20-0000-746 sk-text">沉默是最大的蔑视！</view>
+        </view>
+        <view class="auth">
+          <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+          <view class="authtext sk-transparent sk-text-20-0000-413 sk-text">学生认证</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-604 sk-text">海洋中的爱与性</view>
+          <view class="new">
+            <view class="new_text sk-transparent sk-text-20-0000-168 sk-text">几乎全新</view>
+          </view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-819 sk-text">经典名著</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-810 sk-text">￥20</view>
+          </view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-757 sk-text" data-phone="undefined" style="background-position-x: 50%;">联系卖家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-494 sk-text" data-id="[object Object]" style="background-position-x: 50%;">马上买</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-134 sk-text">侧脸23331</view>
+          <view class="descript sk-transparent sk-text-20-0000-113 sk-text">沉默是最大的蔑视！</view>
+        </view>
+        <view class="auth">
+          <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+          <view class="authtext sk-transparent sk-text-20-0000-569 sk-text">学生认证</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-947 sk-text">高等数学辅导</view>
+          <view class="new">
+            <view class="new_text sk-transparent sk-text-20-0000-655 sk-text">高数辅导的书，低价卖出</view>
+          </view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-944 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-226 sk-text">￥5</view>
+          </view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-37 sk-text" data-phone="undefined" style="background-position-x: 50%;">联系卖家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-849 sk-text" data-id="[object Object]" style="background-position-x: 50%;">马上买</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-485 sk-text">侧脸23331</view>
+          <view class="descript sk-transparent sk-text-20-0000-897 sk-text">沉默是最大的蔑视！</view>
+        </view>
+        <view class="auth">
+          <view class="icon-renzheng sk-pseudo sk-pseudo-circle"></view>
+          <view class="authtext sk-transparent sk-text-20-0000-379 sk-text">学生认证</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-82 sk-text">数据结构、算法与应用</view>
+          <view class="new">
+            <view class="new_text sk-transparent sk-text-20-0000-60 sk-text">学习算法和数据结构的一本书，几乎全新</view>
+          </view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-949 sk-text">程序设计</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-530 sk-text">￥30</view>
+          </view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-869 sk-text" data-phone="undefined" style="background-position-x: 50%;">联系卖家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-626 sk-text" data-id="[object Object]" style="background-position-x: 50%;">马上买</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

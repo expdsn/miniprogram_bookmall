@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+
+  },
+  "navigationBarBackgroundColor": "#3CB371",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发现",
+  "backgroundColor": "#3CB371",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh" : true
+
+
 }

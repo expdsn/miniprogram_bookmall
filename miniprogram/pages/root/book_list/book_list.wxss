@@ -1,1 +1,67 @@
-/* pages/root/book_list/book_list.wxss */
+/* miniprogram/pages/root/book_list/book_list.wxss */
+.list {
+  padding-bottom: 100rpx;
+}
+.head-info {
+  display: flex;
+  justify-content: center;
+  font-size: 50rpx;
+  color: #666;
+}
+.red {
+  color: #f55 !important;
+}
+
+.list .title {
+  display: flex;
+  height: 120rpx;
+  box-shadow: 1px 2px 3px #ddd;
+  justify-content: space-between;
+  align-items: center;
+}
+.list .item {
+  display: flex;
+  height: 120rpx;
+  border-bottom: 1px solid #ddd;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.title>view {
+  display: flex;
+  justify-content: center;
+}
+.t1 {
+  width: 20%;
+}
+.t3 {
+  width: 35%;
+}
+.t2 {
+  width: 45%;
+}
+.item view {
+  color: #666;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item  .book-name {
+  text-align: left;
+  font-size: 36rpx;
+  width: 45%;
+  
+  justify-content: left !important;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.item  .id {
+  font-size: 36rpx;
+  width: 20%;
+}
+.item  .operation {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}

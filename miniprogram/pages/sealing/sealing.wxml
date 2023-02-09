@@ -1,6 +1,45 @@
-<view class="sealing">
-  <usermsg class="msgcon"></usermsg>
-  <block wx:for='{{tradelist}}' wx:key='index'>
-    <trade_item item="{{item}}"></trade_item>
-  </block>
+<import src="sealing.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="sealing" wx-if="{{!loading}}">
+  <!-- <view class="usermsg">
+  <view class="imgcon">
+    <image src="../../images/goodsitem/test.jpg" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">boboupgo</view>
+    <view class="descript">刚刚来过</view>
+  </view>
+  <view class="auth">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+ -->
+<!-- 
+</view> -->
+
+<view class="trade_item" wx:for="{{tradelist}}" wx:key="index">
+  <view class="img_con">
+    <image mode="aspectFill" src="{{tradeUrlList[index]}}" class="img"></image>
+  </view>
+  <view class="msg_con">
+    <view class="bookname">{{item.bookInfo.bookName}}</view>
+    <view class="descript">{{item.desc}}</view>
+    <view>
+      <view class="icon-location">{{item.position}}</view>
+
+    </view>
+    <view class="charge">
+
+      <view class="charge_text">￥{{item.goodPrice}}</view>
+    </view>
+    <view class="condition">{{item.condition}}</view>
+  
+    <view class="status_con2" >
+      <view class="item" bindtap="flash" data-id="{{item._id}}" data-time="{{item.sellTime}}">擦灰</view>
+      <view class="item" bindtap="pushdown" data-id="{{item._id}}" data-index="{{index}}">下架</view>
+    </view>
+  </view>
+  
+</view>
+
 </view>

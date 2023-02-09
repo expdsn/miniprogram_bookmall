@@ -1,0 +1,119 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/5/27 下午4:26:42
+使用方法：
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\seal\seal.wxml 引入模板
+
+```
+<import src="seal.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\WorkSpace\MiniProgram\cdtu_book_mall\miniprogram\pages\seal\seal.wxss 中引入样式
+```
+@import "./seal.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="buy">
+      <view class="status_con">
+        <view class="itemactive" data-index="0">全部</view>
+        <view class="item" data-index="1">待发货</view>
+        <view class="item" data-index="2">待收货</view>
+        <view class="item" data-index="3">待评价</view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-536 sk-text">侧脸</view>
+          <view class="descript sk-transparent sk-text-20-0000-237 sk-text">沉默是最大的蔑视！</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-83 sk-text">测试数据</view>
+          <view class="descript sk-transparent sk-text-20-0000-520 sk-text">测试数据7</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-947 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-319 sk-text">￥12</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-994 sk-text">等待收货</view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-705 sk-text" data-address="[object Object]" data-name="123" data-phone="18111002318" style="background-position-x: 50%;">联系买家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-667 sk-text" style="background-position-x: 50%;">提醒收货</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-417 sk-text">侧脸</view>
+          <view class="descript sk-transparent sk-text-20-0000-154 sk-text">沉默是最大的蔑视！</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-69 sk-text">测试数据</view>
+          <view class="descript sk-transparent sk-text-20-0000-143 sk-text">测试数据2</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-965 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-364 sk-text">￥7</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-511 sk-text">等待收货</view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-837 sk-text" data-address="[object Object]" data-name="123" data-phone="18111002318" style="background-position-x: 50%;">联系买家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-414 sk-text" style="background-position-x: 50%;">提醒收货</view>
+          </view>
+        </view>
+      </view>
+      <view class="usermsg" style="border: none;">
+        <view class="imgcon">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msgcon">
+          <view class="name sk-transparent sk-text-15-0000-710 sk-text">侧脸</view>
+          <view class="descript sk-transparent sk-text-20-0000-731 sk-text">沉默是最大的蔑视！</view>
+        </view>
+      </view>
+      <view class="trade_item" style="border: none;">
+        <view class="img_con">
+          <image class="img sk-image" mode="aspectFill"></image>
+        </view>
+        <view class="msg_con">
+          <view class="bookname sk-transparent sk-text-15-0000-194 sk-text">测试数据</view>
+          <view class="descript sk-transparent sk-text-20-0000-640 sk-text">测试数据4</view>
+          <view class="new">
+            <view class="icon-tag sk-pseudo sk-pseudo-circle"></view>
+            <view class="new_text sk-transparent sk-text-20-0000-699 sk-text">考研书籍</view>
+          </view>
+          <view class="charge">
+            <view class="charge_text sk-transparent sk-text-5-0000-706 sk-text">￥5</view>
+          </view>
+          <view class="condition sk-transparent sk-text-20-0000-830 sk-text">等待收货</view>
+          <view class="status_btn">
+            <view class="btn-left sk-transparent sk-text-26-6667-775 sk-text" data-address="[object Object]" data-name="123" data-phone="18111002318" style="background-position-x: 50%;">联系买家</view>
+            <view class="btn-right sk-transparent sk-text-26-6667-762 sk-text" style="background-position-x: 50%;">提醒收货</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

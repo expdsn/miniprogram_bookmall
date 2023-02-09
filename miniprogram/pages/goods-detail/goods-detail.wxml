@@ -1,2 +1,78 @@
-<!--pages/goods-detail/goods-detail.wxml-->
-<text>pages/goods-detail/goods-detail.wxml</text>
+<import src="goods-detail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<block wx:if="{{!loading}}">
+<view class="usermsg">
+  <view class="imgcon">
+    <image src="{{goodsItem.userInfo.avatarUrl}}" class="img"></image>
+  </view>
+  <view class="msgcon">
+    <view class="name">{{goodsItem.userInfo.nickName}}</view>
+    <view class="descript">{{timeString}}</view>
+  </view>
+  <view class="auth" wx:if="{{goodsItem.userInfo.authorizeStatus == 3}}">
+    <view class="icon-renzheng"></view>
+    <view class="authtext">学生认证</view>
+  </view>
+</view>
+<view class="goodsdetails">
+  <view class="charge_con">
+    <view class="left" style="color:#f00;">￥{{goodsItem.goodPrice}}</view>
+
+    <view class="center" wx:if="{{!goodsItem.isPostFree}}">运费:￥{{goodsItem.postPrice}}</view>
+    <view class="center" wx:if="{{goodsItem.isPostFree}}">运费:免运费</view>
+
+    <view class="right" wx:if="{{goodsItem.canNoPost}}">支持自提</view>
+    <view class="right" wx:if="{{!goodsItem.canNoPost}}">不支持自提</view>
+  </view>
+  <view class="local">
+    <view class="icon-location"></view>
+    <view class="localtext">{{goodsItem.position}}</view>
+  </view>
+  <view class="swiperstyle">
+    <swiper indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" 
+            interval="{{interval}}" 
+            duration="{{duration}}">
+
+          <swiper-item class="swipter-item" bindtap="checkImg" data-index="0">
+            <image mode="aspectFill" src="{{imgUrl}}"></image>
+          </swiper-item>
+          <swiper-item wx:for="{{urlList}}" wx:if="{{index!=0}}" wx:key="index"  class="swipter-item" bindtap="checkImg" data-index="{{index}}">
+            <image mode="aspectFill" src="{{item}}"></image>
+          </swiper-item>
+
+      </swiper>
+  </view>
+  <view class="details_title">书籍信息</view>
+
+  <view class="bookmsg">
+    <view class="item">
+      <view class="left">书名</view>
+      <view class="right">{{goodsItem.bookInfo.bookName}}</view>
+    </view>
+    <view class="item">
+      <view class="left">作者</view>
+      <view class="right">{{goodsItem.bookInfo.author}}</view>
+    </view>
+    <view class="item">
+      <view class="left">出版社</view>
+      <view class="right">{{goodsItem.bookInfo.press}}</view>
+    </view>
+    <view class="item">
+      <view class="left">ISBN</view>
+      <view class="right">{{goodsItem.bookInfo.ISBN}}</view>
+    </view>
+
+  </view>
+  <view class="details_title">商品详情</view>
+  <view class="details_text">{{goodsItem.desc}}</view>
+  <view class="bottom">
+    <view class="left" bindtap="changeWant">
+      <view class="icon-shoucang1 {{wanted?'wanted':''}}"></view>
+      <view class="down">{{wanted?'取消':'想要'}}</view>
+    </view>
+
+    <view class="right" bindtap="goBuy" data-id="{{goodsItem._id}}">发起交易</view>
+  </view>
+</view>
+</block>

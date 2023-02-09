@@ -1,2 +1,59 @@
-<!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<import src="find.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+<view class="find" wx:if="{{!loading}}">
+  <view class="fix-top">
+  <!-- <view class="find-header">
+    <view class="find-nav">
+      <view class="selected">购书</view>
+      <view>圈子</view>
+    </view>
+  </view> -->
+  <view class="book">
+    <view class="book-nav">
+      <view class="{{nav2==0?'selected':''}}" bindtap="changeNav2" data-index="0">
+        <view class="name">自由市场</view>
+        <view class="tag"><view></view></view>
+      </view>
+      <view class="{{nav2==1?'selected':''}}" bindtap="changeNav2" data-index="1">
+        <view class="name">推荐</view>
+        <view class="tag"><view></view></view>
+      </view>
+    </view>
+  </view>
+</view>
+  <view class="father">
+      <view class="seq">
+    <view class="book-goods"  wx:for="{{freeGoodsList}}" wx:key="index" wx:if="{{index%2==0}}" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img" ><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if='{{item.userInfo.authorizeStatus==3}}'></text>
+        </view>
+      </view>
+    </view>
+       </view>
+  <view class="seq" >
+    <view class="book-goods" wx:for="{{freeGoodsList}}" wx:if="{{index%2==1}}" wx:key="index" data-goods="{{item}}" data-img="{{fressGoodsFileUrlList[index]}}" bindtap="toDetail">
+      <view class="img"><image mode="aspectFill" src="{{fressGoodsFileUrlList[index]}}"></image>
+      </view>
+      <view class="good-detail">
+        <view class="detail">{{item.desc}}</view>
+        <view class="classify"><text>{{classifyStringList[index]}}</text></view>
+        <view class="price">￥{{item.goodPrice}}<text class="old_price" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text></view>
+        <view class="seller">
+          <image class="seller_header" src="{{item.userInfo.avatarUrl}}"></image>
+          <text class="seller_locate">{{item.position}}</text>
+          <text class="seller_idntify" wx:if="{{item.userInfo.authorizeStatus==3}}"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+    </view>
+    <view class="load-msg" wx:if="{{loaded}}"><text>正在载入更多...</text></view>
+</view>

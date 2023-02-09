@@ -1,1 +1,94 @@
-/* pages/choose_address/choose_address.wxss */
+/* pages/shdz/shdz.wxss */
+/* 引入字体图标 */
+@import '../../iconfont.wxss';
+.recieve {
+  margin: 100rpx 0 0 36rpx;
+  font-size: 32rpx;
+  color: #DE7D2C;
+  font-weight: 700;
+}
+/* 添加按钮 */
+.icon-tianjia {
+  position: absolute;
+  top:120rpx;
+  right: 10%;
+  font-family: 'iconfont';
+  font-size: 36rpx;
+}
+/* 收货信息表 */
+.inform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40rpx auto 0;
+  width: 702rpx;
+  height: 418rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(0, 0, 0, 0.4);
+  border: 2rpx solid rgba(255, 255, 255, 100);
+  /* padding-bottom: 100rpx; */
+}
+.inform:last-child{
+  margin-bottom: 69rpx;
+}
+/* 姓名电话 */
+.inform_my {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  width: 90%;
+  border-bottom: 1px solid #E1E3E6;
+  font-size: 32rpx;
+  color: #505559;
+}
+/* 收货地址 */
+.inform_address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex:2;
+  width: 90%;
+  border-bottom: 1px solid #E1E3E6;
+  font-size: 32rpx;
+  color: #505559;
+}
+/* 默认地址栏 */
+.inform_default {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 90%;
+  font-size: 32rpx;
+  color: #505559;
+}
+/* 添加 删除 */
+.default_edit,
+.default_delete {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.default_edit {
+  background-color: #1C9E56;
+}
+.default_delete {
+  background-color: #E64340;
+}
+/* 默认地址按钮 */
+.icon-dui {
+  font-family: 'iconfont';
+}
+.icon-dui::before {
+  margin-right: 10rpx;
+  color: #09BB07;
+}
+
